@@ -35,6 +35,8 @@ function App() {
     queryFn: () => renderVideos(id),
   });
 
+  console.log(input);
+
   // useEffect(() => {
   //   const url =
   //     "https://youtube-v31.p.rapidapi.com/search?relatedToVideoId=7ghhRHRP6t4&part=id%2Csnippet&type=video&maxResults=50";
@@ -134,7 +136,13 @@ function App() {
         </div>
 
         <form className="search-form">
-          <input className="search-input" type="text" placeholder="Search..." />
+          <input
+            className="search-input"
+            type="text"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            placeholder="Search..."
+          />
           <button className="btn-input">🔎</button>
         </form>
       </nav>

@@ -51,16 +51,20 @@ nav {
   height: 32px;
   width: 270px;
   border: none;
-  border-radius: 222px;
+  border-top-left-radius: 222px;
+  border-bottom-left-radius: 222px;
   padding-left: 10px;
   font-size: 16px;
 }
+
 .btn-input {
   height: 32px;
-  border-radius: 222px;
+  /* border-radius: 222px; */
   width: 50px;
-  margin-left: -30px;
+  /* margin-left: -30px; */
   /* border: 0.2px solid gray; */
+  border-top-right-radius: 222px;
+  border-bottom-right-radius: 222px;
   border: none;
   background-color: white;
 }
