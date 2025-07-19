@@ -35,7 +35,7 @@ function App() {
     queryFn: () => renderVideos(id),
   });
 
-  console.log(input);
+  console.log(data);
 
   // useEffect(() => {
   //   const url =
@@ -177,13 +177,15 @@ function App() {
           )}
 
           {data?.items?.map((video, index) => (
-            <Article
-              key={index}
-              thumbnail={video.snippet.thumbnails.default.url}
-              title={video.snippet.title}
-              chanel={video.snippet.channelTitle}
-              time={formatDate(video.snippet.publishedAt)}
-            />
+            <a className="link-article" href={`/video/${video.id.videoId}`}>
+              <Article
+                key={index}
+                thumbnail={video.snippet.thumbnails.default.url}
+                title={video.snippet.title}
+                chanel={video.snippet.channelTitle}
+                time={formatDate(video.snippet.publishedAt)}
+              />
+            </a>
           ))}
         </main>
       </section>
@@ -197,7 +199,7 @@ const renderVideos = async (id) => {
     {
       method: "GET",
       headers: {
-        "x-rapidapi-key": "37b9fbdafamsh38ae9b00f9888abp1cb0e5jsn54745baf4c79",
+        "x-rapidapi-key": "be6fa48021msh06130b56f1fc57bp1a07f5jsn0641dee67229",
         "x-rapidapi-host": "youtube-v31.p.rapidapi.com",
       },
     }

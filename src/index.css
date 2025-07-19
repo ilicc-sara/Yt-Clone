@@ -128,13 +128,22 @@ aside {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   row-gap: 20px;
   width: 80%;
+  position: relative;
 }
 
 .displayed-videos {
   font-size: 22px;
+  position: absolute;
+  top: -30px;
+  left: 30px;
 }
 .videos-span {
   color: rgb(216, 11, 0);
+}
+
+.link-article {
+  text-decoration: none;
+  color: white;
 }
 
 .video-article {
