@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import Article from "./Article";
+
+import Videos from "./Videos";
 import "./App.css";
-import { formatDistance, subDays, formatDistanceToNow } from "date-fns";
+
 import {
   QueryClient,
   QueryClientProvider,
@@ -36,16 +37,6 @@ function App() {
   });
 
   console.log(data);
-
-  function formatDate(string) {
-    const index = string.indexOf("T");
-
-    const dateOfUploading = string.slice(0, index).split("-");
-
-    const timeAgo = formatDistanceToNow(dateOfUploading, { addSuffix: true });
-
-    return timeAgo.replace("about ", "");
-  }
 
   return (
     <>
@@ -98,7 +89,7 @@ function App() {
             </h1>
           )}
 
-          {data?.items?.map((video, index) => (
+          {/* {data?.items?.map((video, index) => (
             <a className="link-article" href={`/video/${video.id.videoId}`}>
               <Article
                 key={index}
@@ -108,7 +99,9 @@ function App() {
                 time={formatDate(video.snippet.publishedAt)}
               />
             </a>
-          ))}
+          ))} */}
+
+          <Videos data={data} />
         </main>
       </section>
     </>
