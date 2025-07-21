@@ -1,7 +1,9 @@
+import { useParams } from "react-router-dom";
 import React from "react";
 
 function Video(props) {
-  return <h1>Video</h1>;
+  const params = useParams();
+  return <h1>Video {params.videoId} </h1>;
 }
 
 export default Video;
