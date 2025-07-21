@@ -35,7 +35,7 @@ function App() {
         </form>
       </nav>
 
-      <Home />
+      {/* <Home /> */}
     </>
   );
 }
