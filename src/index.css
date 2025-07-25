@@ -188,3 +188,9 @@ aside {
   width: fit-content;
   text-align: left;
 }
+
+.video-display-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+}

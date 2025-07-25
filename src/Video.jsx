@@ -28,12 +28,26 @@ function Video(props) {
           />
 
           <h1> {data.items[0].snippet.title} </h1>
-          <p> views: {data.items[0].statistics.viewCount} </p>
-          <ion-icon name="thumbs-up-outline"></ion-icon>
-          <ion-icon name="thumbs-down-outline"></ion-icon>
-          <ion-icon name="share-social-outline"></ion-icon>
-          <ion-icon name="download-outline"></ion-icon>
-          <p> likes: {data.items[0].statistics.likeCount} </p>
+
+          <div className="video-display-info">
+            <p> views: {data.items[0].statistics.viewCount} </p>
+
+            <p>
+              <ion-icon name="thumbs-up-outline"></ion-icon>{" "}
+              {data.items[0].statistics.likeCount}{" "}
+            </p>
+            <ion-icon name="thumbs-down-outline"></ion-icon>
+
+            <p>
+              <ion-icon name="share-social-outline"></ion-icon>
+              SHARE
+            </p>
+
+            <p>
+              <ion-icon name="download-outline"></ion-icon>
+              Download
+            </p>
+          </div>
         </div>
       )}
     </>
