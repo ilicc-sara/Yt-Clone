@@ -70,50 +70,30 @@ function Video(props) {
       {commentsQuery.isPending && <h1>Loading...</h1>}
       <div className="comments-display">
         {commentsQuery.data &&
-          commentsQuery.data.items.map((comment, index) => (
+          commentsQuery.data.items.map((comment, index) =>
+            // prettier-ignore
             <div className="comments-display-item">
-              <img
-                src={
-                  comment.snippet.topLevelComment.snippet.authorProfileImageUrl
-                }
-              />
+
+              <img src={comment.snippet.topLevelComment.snippet.authorProfileImageUrl}/>
 
               <div>
-                {/* <p> comment Id: {comment.id} </p> */}
-                {/* <p>
-                {" "}
-                author chanel url:{" "}
-                {comment.snippet.topLevelComment.snippet.authorChannelUrl}{" "}
-              </p> */}
-
-                <p>
-                  {" "}
-                  @{
-                    comment.snippet.topLevelComment.snippet.authorDisplayName
-                  }{" "}
-                  <span>
+                {/* prettier-ignore */}
+                <p className="authors-name" >{comment.snippet.topLevelComment.snippet.authorDisplayName}&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span className="published-at">
                     {comment.snippet.topLevelComment.snippet.publishedAt}
                   </span>
                 </p>
-                {/* <p>
-                {" "}
-                published at:{" "}
-                {comment.snippet.topLevelComment.snippet.publishedAt}{" "}
-              </p> */}
-                <p>
-                  {" "}
-                  coment text:{" "}
-                  {comment.snippet.topLevelComment.snippet.textDisplay}{" "}
-                </p>
-                <p>
-                  {" "}
-                  likes: {
-                    comment.snippet.topLevelComment.snippet.likeCount
-                  }{" "}
+              
+                {/* prettier-ignore */}
+                <p className="comment-text" >{comment.snippet.topLevelComment.snippet.textDisplay}</p>
+
+                {/* prettier-ignore */}
+                <p className="display-likes" > 
+                  <ion-icon name="thumbs-up-outline"></ion-icon> {comment.snippet.topLevelComment.snippet.likeCount}
                 </p>
               </div>
             </div>
-          ))}
+          )}
       </div>
     </>
   );

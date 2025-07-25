@@ -89,8 +89,9 @@ If you are developing a production application, we recommend using TypeScript wi
 // }
 // }
 
-{/_ {data?.items?.map((video, index) => (
+{/\_ {data?.items?.map((video, index) => (
 <a className="link-article" href={`/video/${video.id.videoId}`}>
+
 <Article
                 key={index}
                 thumbnail={video.snippet.thumbnails.default.url}
@@ -100,3 +101,16 @@ If you are developing a production application, we recommend using TypeScript wi
               />
 </a>
 ))} _/}
+
+comments
+{/_ <p> comment Id: {comment.id} </p> _/}
+{/_ <p>
+{" "}
+author chanel url:{" "}
+{comment.snippet.topLevelComment.snippet.authorChannelUrl}{" "}
+</p> _/}
+{/_ <p>
+{" "}
+published at:{" "}
+{comment.snippet.topLevelComment.snippet.publishedAt}{" "}
+</p> _/}

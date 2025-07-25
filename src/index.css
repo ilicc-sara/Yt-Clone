@@ -210,17 +210,47 @@ aside {
 /* Comments */
 
 .comments-display {
+  padding: 20px 0;
   width: 900px;
   display: flex;
   flex-direction: column;
+  gap: 20px;
 }
 
 .comments-display-item {
   display: flex;
   justify-content: flex-start;
+  gap: 15px;
   text-align: left;
 }
 
 .comments-display-item img {
   border-radius: 222px;
+  aspect-ratio: 1 / 1;
+  width: 50px;
+  height: 50px;
+}
+
+.authors-name {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.616);
+}
+
+.published-at {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.comment-text {
+  font-size: 18px;
+}
+
+.display-likes {
+  font-size: 18px;
+}
+
+.display-likes ion-icon {
+  width: 20px;
+  height: 20px;
 }
