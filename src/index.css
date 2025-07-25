@@ -184,6 +184,13 @@ aside {
 
 /* Video */
 
+.clicked-video-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+}
+
 .video-display {
   width: 900px;
   text-align: left;
@@ -253,4 +260,12 @@ aside {
 .display-likes ion-icon {
   width: 20px;
   height: 20px;
+}
+
+/* Suggested videos */
+
+.suggested-display {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }

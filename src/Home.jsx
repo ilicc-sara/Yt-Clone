@@ -73,7 +73,7 @@ const renderVideos = async (id) => {
   const options = {
     method: "GET",
     headers: {
-      "x-rapidapi-key": "1f89a35b68msh5d56de085989acbp1ec08ajsnf3dbb4f6dca9",
+      "x-rapidapi-key": "b60812144cmsh92331a1a8e088d2p19c52ajsndad421260905",
       "x-rapidapi-host": "youtube-v31.p.rapidapi.com",
     },
   };
