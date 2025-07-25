@@ -59,7 +59,7 @@ function Video(props) {
           <div className="video-display">
             <YouTube
               videoId={params.videoId}
-              opts={{ height: "500px", width: "900px" }}
+              opts={{ height: "600px", width: "1000px" }}
             />
 
             <h1> {videoQuery.data.items[0].snippet.title} </h1>

@@ -192,7 +192,7 @@ aside {
 }
 
 .video-display {
-  width: 900px;
+  width: 1000px;
   text-align: left;
 }
 
@@ -218,7 +218,8 @@ aside {
 
 .comments-display {
   padding: 20px 0;
-  width: 900px;
+  width: 1000px;
+  /* width: 100%; */
   display: flex;
   flex-direction: column;
   gap: 20px;
