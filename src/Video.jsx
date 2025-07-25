@@ -5,6 +5,7 @@ import {
   QueryClientProvider,
   useQuery,
 } from "@tanstack/react-query";
+import YouTube from "react-youtube";
 
 function Video(props) {
   const params = useParams();
@@ -18,22 +19,37 @@ function Video(props) {
     <>
       {isPending && <h1>Loading...</h1>}
       <h1>Video {params.videoId} </h1>
+
+      {data && (
+        <>
+          <YouTube videoId={params.videoId} />
+          {/* <div
+            style={{
+              backgroundImage: `url(${data.items[0].snippet.thumbnails.standard.url})`,
+              width: "640px",
+              height: "480px",
+            }}
+          >
+            <p> {data.items[0].snippet.title} </p>
+          </div> */}
+          <p> {data.items[0].snippet.title} </p>
+        </>
+      )}
     </>
   );
 }
 
 const renderVideo = async (id) => {
-  const response = await fetch(
-    // `https://youtube-v31.p.rapidapi.com/search?q=${id}&part=snippet,id&maxResults=24&regionCode=US`,
-    `https://youtube-v31.p.rapidapi.com/videos?part=contentDetails,snippet,statistics&id=${id}`,
-    {
-      method: "GET",
-      headers: {
-        "x-rapidapi-key": "be6fa48021msh06130b56f1fc57bp1a07f5jsn0641dee67229",
-        "x-rapidapi-host": "youtube-v31.p.rapidapi.com",
-      },
-    }
-  );
+  const url = `https://youtube-v31.p.rapidapi.com/videos?part=contentDetails,snippet,statistics&id=${id}`;
+  const options = {
+    method: "GET",
+    headers: {
+      "x-rapidapi-key": "d9efc1fe32msh16930bf036ff25cp19e4d2jsn0888502f5ab3",
+      "x-rapidapi-host": "youtube-v31.p.rapidapi.com",
+    },
+  };
+
+  const response = await fetch(url, options);
   return await response.json();
 };
 

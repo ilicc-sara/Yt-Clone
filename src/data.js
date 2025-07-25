@@ -1,0 +1,16 @@
+export const categories = [
+  { icon: "home", name: "Home", id: "New" },
+  { icon: "flame", name: "Trending", id: "Trending" },
+  { icon: "code-slash", name: "Coding", id: "coding" },
+  { icon: "logo-javascript", name: "Javascript", id: "java%script" },
+  { icon: "logo-react", name: "ReactJS", id: "reactJS" },
+  { icon: "musical-notes", name: "Music", id: "music" },
+  { icon: "book", name: "Education", id: "education" },
+  { icon: "mic", name: "Podcast", id: "podcast" },
+  { icon: "film", name: "Movie", id: "movie" },
+  { icon: "game-controller", name: "Gaming", id: "gaming" },
+  { icon: "pulse", name: "Live", id: "live" },
+  { icon: "football", name: "Sport", id: "sport" },
+  { icon: "sparkles", name: "Fashion", id: "fashion" },
+  { icon: "diamond", name: "Beauty", id: "beauty" },
+];

@@ -5,26 +5,10 @@ import {
   QueryClientProvider,
   useQuery,
 } from "@tanstack/react-query";
+import { categories } from "./data";
 
 function Home() {
   const [input, setInput] = useState("");
-
-  const [categories, setCategories] = useState([
-    { icon: "home", name: "Home", id: "New" },
-    { icon: "flame", name: "Trending", id: "Trending" },
-    { icon: "code-slash", name: "Coding", id: "coding" },
-    { icon: "logo-javascript", name: "Javascript", id: "java%script" },
-    { icon: "logo-react", name: "ReactJS", id: "reactJS" },
-    { icon: "musical-notes", name: "Music", id: "music" },
-    { icon: "book", name: "Education", id: "education" },
-    { icon: "mic", name: "Podcast", id: "podcast" },
-    { icon: "film", name: "Movie", id: "movie" },
-    { icon: "game-controller", name: "Gaming", id: "gaming" },
-    { icon: "pulse", name: "Live", id: "live" },
-    { icon: "football", name: "Sport", id: "sport" },
-    { icon: "sparkles", name: "Fashion", id: "fashion" },
-    { icon: "diamond", name: "Beauty", id: "beauty" },
-  ]);
 
   const [id, setId] = useState(categories[0].id);
 
@@ -84,16 +68,15 @@ function Home() {
 }
 
 const renderVideos = async (id) => {
-  const response = await fetch(
-    `https://youtube-v31.p.rapidapi.com/search?q=${id}&part=snippet,id&maxResults=24&regionCode=US`,
-    {
-      method: "GET",
-      headers: {
-        "x-rapidapi-key": "be6fa48021msh06130b56f1fc57bp1a07f5jsn0641dee67229",
-        "x-rapidapi-host": "youtube-v31.p.rapidapi.com",
-      },
-    }
-  );
+  const url = `https://youtube-v31.p.rapidapi.com/search?q=${id}&part=snippet,id&maxResults=24&regionCode=US`;
+  const options = {
+    method: "GET",
+    headers: {
+      "x-rapidapi-key": "d9efc1fe32msh16930bf036ff25cp19e4d2jsn0888502f5ab3",
+      "x-rapidapi-host": "youtube-v31.p.rapidapi.com",
+    },
+  };
+  const response = await fetch(url, options);
   return await response.json();
 };
 
