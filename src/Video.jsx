@@ -18,7 +18,7 @@ function Video(props) {
   return (
     <>
       {isPending && <h1>Loading...</h1>}
-      <h1>Video {params.videoId} </h1>
+      {/* <h1>Video {params.videoId} </h1> */}
 
       {data && (
         <div className="video-display">
@@ -30,14 +30,19 @@ function Video(props) {
           <h1> {data.items[0].snippet.title} </h1>
 
           <div className="video-display-info">
-            <p> views: {data.items[0].statistics.viewCount} </p>
+            <p className="views">
+              {" "}
+              {Number(data.items[0].statistics.viewCount).toLocaleString(
+                "en-US"
+              )}{" "}
+              views
+            </p>
 
             <p>
               <ion-icon name="thumbs-up-outline"></ion-icon>{" "}
               {data.items[0].statistics.likeCount}{" "}
             </p>
             <ion-icon name="thumbs-down-outline"></ion-icon>
-
             <p>
               <ion-icon name="share-social-outline"></ion-icon>
               SHARE
