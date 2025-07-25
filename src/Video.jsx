@@ -6,6 +6,7 @@ import {
   useQuery,
 } from "@tanstack/react-query";
 import YouTube from "react-youtube";
+import Videos from "./Videos";
 
 function Video(props) {
   const params = useParams();
@@ -26,6 +27,18 @@ function Video(props) {
 
   // console.log(videoQuery.data);
   console.log("comments data", commentsQuery.data);
+  // console.log("chanelId", commentsQuery.data?.items[0].snippet.channelId);
+
+  const chanelId = commentsQuery.data?.items[0].snippet.channelId;
+  console.log("chanelId", chanelId);
+
+  const suggestedQuery = useQuery({
+    queryKey: ["suggested", chanelId],
+    queryFn: () => renderSuggested(chanelId),
+  });
+
+  console.log("suggested videos", suggestedQuery.data);
+
   return (
     <>
       {videoQuery.isPending && <h1>Loading...</h1>}
@@ -55,13 +68,11 @@ function Video(props) {
             </p>
             <ion-icon name="thumbs-down-outline"></ion-icon>
             <p>
-              <ion-icon name="share-social-outline"></ion-icon>
-              SHARE
+              <ion-icon name="share-social-outline"></ion-icon>&nbsp;SHARE
             </p>
 
             <p>
-              <ion-icon name="download-outline"></ion-icon>
-              Download
+              <ion-icon name="download-outline"></ion-icon>&nbsp;Download
             </p>
           </div>
         </div>
@@ -95,6 +106,11 @@ function Video(props) {
             </div>
           )}
       </div>
+
+      {suggestedQuery.isPending && <h1>Loading...</h1>}
+      <div className="suggested-display">
+        <Videos data={suggestedQuery.data} />
+      </div>
     </>
   );
 }
@@ -124,6 +140,20 @@ const renderComments = async (id) => {
   };
 
   const response = await fetch(commentsUrl, options);
+  return await response.json();
+};
+
+const renderSuggested = async (id) => {
+  const suggestedUrl = `https://youtube-v31.p.rapidapi.com/search?channelId=${id}&part=snippet,id&order=date&maxResults=34`;
+  const options = {
+    method: "GET",
+    headers: {
+      "x-rapidapi-key": "1f89a35b68msh5d56de085989acbp1ec08ajsnf3dbb4f6dca9",
+      "x-rapidapi-host": "youtube-v31.p.rapidapi.com",
+    },
+  };
+
+  const response = await fetch(suggestedUrl, options);
   return await response.json();
 };
 
