@@ -6,6 +6,7 @@ import {
   useQuery,
 } from "@tanstack/react-query";
 import { categories } from "./data";
+import LogRocket from "logrocket";
 
 function Home() {
   const [input, setInput] = useState("");
@@ -72,7 +73,7 @@ const renderVideos = async (id) => {
   const options = {
     method: "GET",
     headers: {
-      "x-rapidapi-key": "d9efc1fe32msh16930bf036ff25cp19e4d2jsn0888502f5ab3",
+      "x-rapidapi-key": "1f89a35b68msh5d56de085989acbp1ec08ajsnf3dbb4f6dca9",
       "x-rapidapi-host": "youtube-v31.p.rapidapi.com",
     },
   };

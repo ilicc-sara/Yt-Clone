@@ -19,13 +19,13 @@ function Video(props) {
     queryFn: () => renderVideo(params.videoId),
   });
 
-  // const commentsQuery = useQuery({
-  //   queryKey: ["comments", params.videoId],
-  //   queryFn: () => renderComments(params.videoId),
-  // });
+  const commentsQuery = useQuery({
+    queryKey: ["comments", params.videoId],
+    queryFn: () => renderComments(params.videoId),
+  });
 
-  // // console.log(videoQuery.data);
-  // console.log(commentsQuery.data);
+  // console.log(videoQuery.data);
+  console.log("comments data", commentsQuery.data);
   return (
     <>
       {videoQuery.isPending && <h1>Loading...</h1>}
@@ -66,6 +66,55 @@ function Video(props) {
           </div>
         </div>
       )}
+
+      {commentsQuery.isPending && <h1>Loading...</h1>}
+      <div className="comments-display">
+        {commentsQuery.data &&
+          commentsQuery.data.items.map((comment, index) => (
+            <div className="comments-display-item">
+              <img
+                src={
+                  comment.snippet.topLevelComment.snippet.authorProfileImageUrl
+                }
+              />
+
+              <div>
+                {/* <p> comment Id: {comment.id} </p> */}
+                {/* <p>
+                {" "}
+                author chanel url:{" "}
+                {comment.snippet.topLevelComment.snippet.authorChannelUrl}{" "}
+              </p> */}
+
+                <p>
+                  {" "}
+                  @{
+                    comment.snippet.topLevelComment.snippet.authorDisplayName
+                  }{" "}
+                  <span>
+                    {comment.snippet.topLevelComment.snippet.publishedAt}
+                  </span>
+                </p>
+                {/* <p>
+                {" "}
+                published at:{" "}
+                {comment.snippet.topLevelComment.snippet.publishedAt}{" "}
+              </p> */}
+                <p>
+                  {" "}
+                  coment text:{" "}
+                  {comment.snippet.topLevelComment.snippet.textDisplay}{" "}
+                </p>
+                <p>
+                  {" "}
+                  likes: {
+                    comment.snippet.topLevelComment.snippet.likeCount
+                  }{" "}
+                </p>
+              </div>
+            </div>
+          ))}
+      </div>
     </>
   );
 }
@@ -75,7 +124,7 @@ const renderVideo = async (id) => {
   const options = {
     method: "GET",
     headers: {
-      "x-rapidapi-key": "d9efc1fe32msh16930bf036ff25cp19e4d2jsn0888502f5ab3",
+      "x-rapidapi-key": "1f89a35b68msh5d56de085989acbp1ec08ajsnf3dbb4f6dca9",
       "x-rapidapi-host": "youtube-v31.p.rapidapi.com",
     },
   };
@@ -84,18 +133,18 @@ const renderVideo = async (id) => {
   return await response.json();
 };
 
-// const renderComments = async (id) => {
-//   const commentsUrl = `https://youtube-v31.p.rapidapi.com/commentThreads?part=snippet&videoId=${id}&maxResults=100`;
-//   const options = {
-//     method: "GET",
-//     headers: {
-//       "x-rapidapi-key": "d9efc1fe32msh16930bf036ff25cp19e4d2jsn0888502f5ab3",
-//       "x-rapidapi-host": "youtube-v31.p.rapidapi.com",
-//     },
-//   };
+const renderComments = async (id) => {
+  const commentsUrl = `https://youtube-v31.p.rapidapi.com/commentThreads?part=snippet&videoId=${id}&maxResults=100`;
+  const options = {
+    method: "GET",
+    headers: {
+      "x-rapidapi-key": "1f89a35b68msh5d56de085989acbp1ec08ajsnf3dbb4f6dca9",
+      "x-rapidapi-host": "youtube-v31.p.rapidapi.com",
+    },
+  };
 
-//   const response = await fetch(commentsUrl, options);
-//   return await response.json();
-// };
+  const response = await fetch(commentsUrl, options);
+  return await response.json();
+};
 
 export default Video;

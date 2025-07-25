@@ -206,3 +206,21 @@ aside {
 .views {
   margin-right: auto;
 }
+
+/* Comments */
+
+.comments-display {
+  width: 900px;
+  display: flex;
+  flex-direction: column;
+}
+
+.comments-display-item {
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.comments-display-item img {
+  border-radius: 222px;
+}
