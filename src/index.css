@@ -18,6 +18,7 @@ body {
   color: white;
 }
 
+/* Navigation  */
 nav {
   display: flex;
   align-items: center;
@@ -59,15 +60,14 @@ nav {
 
 .btn-input {
   height: 32px;
-  /* border-radius: 222px; */
   width: 50px;
-  /* margin-left: -30px; */
-  /* border: 0.2px solid gray; */
   border-top-right-radius: 222px;
   border-bottom-right-radius: 222px;
   border: none;
   background-color: white;
 }
+
+/* Home */
 
 section {
   display: flex;
@@ -180,4 +180,11 @@ aside {
   margin-left: 10px;
   font-size: 12px;
   font-weight: 500;
+}
+
+/* Video */
+
+.video-display {
+  width: fit-content;
+  text-align: left;
 }

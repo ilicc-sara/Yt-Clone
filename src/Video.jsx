@@ -21,19 +21,20 @@ function Video(props) {
       <h1>Video {params.videoId} </h1>
 
       {data && (
-        <>
-          <YouTube videoId={params.videoId} />
-          {/* <div
-            style={{
-              backgroundImage: `url(${data.items[0].snippet.thumbnails.standard.url})`,
-              width: "640px",
-              height: "480px",
-            }}
-          >
-            <p> {data.items[0].snippet.title} </p>
-          </div> */}
-          <p> {data.items[0].snippet.title} </p>
-        </>
+        <div className="video-display">
+          <YouTube
+            videoId={params.videoId}
+            opts={{ height: "500px", width: "900px" }}
+          />
+
+          <h1> {data.items[0].snippet.title} </h1>
+          <p> views: {data.items[0].statistics.viewCount} </p>
+          <ion-icon name="thumbs-up-outline"></ion-icon>
+          <ion-icon name="thumbs-down-outline"></ion-icon>
+          <ion-icon name="share-social-outline"></ion-icon>
+          <ion-icon name="download-outline"></ion-icon>
+          <p> likes: {data.items[0].statistics.likeCount} </p>
+        </div>
       )}
     </>
   );
