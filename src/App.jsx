@@ -1,13 +1,5 @@
 import { useState, useEffect } from "react";
-
 import "./App.css";
-
-import {
-  QueryClient,
-  QueryClientProvider,
-  useQuery,
-} from "@tanstack/react-query";
-import Home from "./Home";
 
 function App() {
   const [input, setInput] = useState("");

@@ -49,18 +49,6 @@ function Home() {
           </h1>
         )}
 
-        {/* {data?.items?.map((video, index) => (
-            <a className="link-article" href={`/video/${video.id.videoId}`}>
-              <Article
-                key={index}
-                thumbnail={video.snippet.thumbnails.default.url}
-                title={video.snippet.title}
-                chanel={video.snippet.channelTitle}
-                time={formatDate(video.snippet.publishedAt)}
-              />
-            </a>
-          ))} */}
-
         <Videos data={data} />
       </main>
     </section>

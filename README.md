@@ -115,10 +115,32 @@ author chanel url:{" "}
 published at:{" "}
 {comment.snippet.topLevelComment.snippet.publishedAt}{" "}
 </p> _/}
-
+////////////////////////////////////////////////////////////////////////////////////
 console.log(videoQuery.data);
 console.log("comments data", commentsQuery.data);
 console.log("chanelId", commentsQuery.data?.items[0].snippet.channelId);
 
 console.log("chanelId", chanelId);
 console.log("suggested videos", suggestedQuery.data);
+//////////////////////////////////////////////////////////////////////////////////////
+{/\_ {data?.items?.map((video, index) => (
+<a className="link-article" href={`/video/${video.id.videoId}`}>
+
+<Article
+                key={index}
+                thumbnail={video.snippet.thumbnails.default.url}
+                title={video.snippet.title}
+                chanel={video.snippet.channelTitle}
+                time={formatDate(video.snippet.publishedAt)}
+              />
+</a>
+))} _/}
+
+<!-- FROM APP.JSX -->
+
+import {
+QueryClient,
+QueryClientProvider,
+useQuery,
+} from "@tanstack/react-query";
+import Home from "./Home";
