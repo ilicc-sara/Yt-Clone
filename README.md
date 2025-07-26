@@ -104,13 +104,21 @@ If you are developing a production application, we recommend using TypeScript wi
 
 comments
 {/_ <p> comment Id: {comment.id} </p> _/}
-{/_ <p>
+{/\_ <p>
 {" "}
 author chanel url:{" "}
 {comment.snippet.topLevelComment.snippet.authorChannelUrl}{" "}
+
 </p> _/}
 {/_ <p>
 {" "}
 published at:{" "}
 {comment.snippet.topLevelComment.snippet.publishedAt}{" "}
 </p> _/}
+
+console.log(videoQuery.data);
+console.log("comments data", commentsQuery.data);
+console.log("chanelId", commentsQuery.data?.items[0].snippet.channelId);
+
+console.log("chanelId", chanelId);
+console.log("suggested videos", suggestedQuery.data);

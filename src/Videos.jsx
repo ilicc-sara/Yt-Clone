@@ -17,7 +17,6 @@ function Videos(props) {
   const { data } = props;
 
   return data?.items?.map((video, index) => (
-    // <a className="link-article" href={`/video/${video.id.videoId}`}>
     <Link className="link-article" to={`/video/${video.id.videoId}`}>
       <Article
         key={index}
@@ -27,7 +26,6 @@ function Videos(props) {
         time={formatDate(video.snippet.publishedAt)}
       />
     </Link>
-    // </a>
   ));
 }
 
