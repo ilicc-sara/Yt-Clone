@@ -6,10 +6,11 @@ import {
   useQuery,
 } from "@tanstack/react-query";
 import { categories } from "./data";
+import { useOutletContext } from "react-router-dom";
 import LogRocket from "logrocket";
 
 function Home() {
-  const [id, setId] = useState(categories[0].id);
+  const { id, setId } = useOutletContext();
 
   const { data, isPending, isLoading, error, isFetching } = useQuery({
     queryKey: ["videos", id],

@@ -11,6 +11,13 @@ import Home from "./Home";
 
 function App() {
   const [input, setInput] = useState("");
+  // const { id, setId } = useOutletContext();
+
+  // function submitForm(e) {
+  //   e.preventDefault();
+  //   setId(input);
+  //   setInput("");
+  // }
 
   return (
     <>
