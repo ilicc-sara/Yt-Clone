@@ -9,8 +9,6 @@ import { categories } from "./data";
 import LogRocket from "logrocket";
 
 function Home() {
-  const [input, setInput] = useState("");
-
   const [id, setId] = useState(categories[0].id);
 
   const { data, isPending, isLoading, error, isFetching } = useQuery({

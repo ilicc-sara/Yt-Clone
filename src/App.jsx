@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 
-import Videos from "./Videos";
 import "./App.css";
 
 import {

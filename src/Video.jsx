@@ -1,10 +1,6 @@
 import { useParams } from "react-router-dom";
 import React from "react";
-import {
-  QueryClient,
-  QueryClientProvider,
-  useQuery,
-} from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 import YouTube from "react-youtube";
 import Videos from "./Videos";
 import Comments from "./Comments";
