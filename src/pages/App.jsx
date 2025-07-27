@@ -1,16 +1,18 @@
 import { useState } from "react";
 import "@/App.css";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function App(props) {
   const [input, setInput] = useState("");
-
   const { id, setId } = props;
+  const navigate = useNavigate();
 
   function submitForm(e) {
     e.preventDefault();
-    setId(input);
+    navigate("/");
     setInput("");
+    setId(input);
   }
 
   console.log(id);
@@ -35,6 +37,7 @@ function App(props) {
             onChange={(e) => setInput(e.target.value)}
             placeholder="Search..."
           />
+
           <button className="btn-input">🔎</button>
         </form>
       </nav>
