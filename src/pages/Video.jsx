@@ -18,10 +18,11 @@ function Video() {
     queryFn: () => renderComments(params.videoId),
   });
 
-  const chanelId = commentsQuery.data?.items[0].snippet.channelId;
+  const channelId = commentsQuery.data?.items[0].snippet.channelId;
+  // const channelId = videoQuery.data?.items.snippet.channelId;
   const suggestedQuery = useQuery({
-    queryKey: ["suggested", chanelId],
-    queryFn: () => renderSuggested(chanelId),
+    queryKey: ["suggested", channelId],
+    queryFn: () => renderSuggested(channelId),
   });
 
   return (
@@ -43,12 +44,14 @@ function Video() {
                 {Number(
                   videoQuery.data.items[0].statistics.viewCount
                 ).toLocaleString("en-US")}
-                views
+                &nbsp;views
               </p>
 
               <p>
-                <ion-icon name="thumbs-up-outline"></ion-icon>{" "}
-                {videoQuery.data.items[0].statistics.likeCount}{" "}
+                <ion-icon name="thumbs-up-outline"></ion-icon>
+                {Number(
+                  videoQuery.data.items[0].statistics.likeCount
+                ).toLocaleString("en-US")}
               </p>
               <ion-icon name="thumbs-down-outline"></ion-icon>
               <p>
