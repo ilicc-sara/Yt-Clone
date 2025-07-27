@@ -2,7 +2,7 @@ import Videos from "@/components/Videos";
 import CategoryButtons from "@/components/CategoryButtons";
 import { useQuery } from "@tanstack/react-query";
 import { useOutletContext } from "react-router-dom";
-import { videosResponse } from "@/api/api";
+import { videosResponse, trendingResponse } from "@/api/api";
 
 function Home() {
   const { id, setId } = useOutletContext();
@@ -36,6 +36,7 @@ function Home() {
 
 const renderVideos = async (id) => {
   // const url = `https://youtube-v31.p.rapidapi.com/search?q=${id}&part=snippet,id&maxResults=24&regionCode=US`;
+  // const Channelurl = `https://youtube-v31.p.rapidapi.com/channels?part=snippet,statistics&id=UCX6OQ3DkcsbYNE6H8uQQuVA`
   // const options = {
   //   method: "GET",
   //   headers: {
@@ -46,7 +47,7 @@ const renderVideos = async (id) => {
   // const response = await fetch(url, options);
   // return await response.json();
 
-  return videosResponse;
+  return trendingResponse;
 };
 
 // pages

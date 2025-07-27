@@ -5,6 +5,7 @@ import Home from "./Home.jsx";
 import NotFoundPage from "./NotFoundPage.jsx";
 import MainLayout from "@/layouts/MainLayout.jsx";
 import Video from "./Video.jsx";
+import Channel from "./Channel.jsx";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: "/video/:videoId",
         element: <Video />,
+      },
+      {
+        path: "/channel/:channelId",
+        element: <Channel />,
       },
     ],
   },

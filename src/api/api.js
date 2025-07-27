@@ -1,3 +1,753 @@
+export const trendingResponse = {
+  kind: "youtube#searchListResponse",
+  nextPageToken: "CBgQAA",
+  regionCode: "US",
+  pageInfo: { totalResults: 1000000, resultsPerPage: 24 },
+  items: [
+    {
+      kind: "youtube#searchResult",
+      id: { kind: "youtube#video", videoId: "PhVQWwjZn54" },
+      snippet: {
+        publishedAt: "2025-06-17T11:14:18Z",
+        channelId: "UCmMc_GEf8CNJ6FWwos0mTmw",
+        title:
+          "She kissed me 🙈 don’t miss the end 🫣 #trending #shorts #catchysmells #itmaaz #perfumer #kissme",
+        description: "",
+        thumbnails: {
+          default: {
+            url: "https://i.ytimg.com/vi/PhVQWwjZn54/default.jpg",
+            width: 120,
+            height: 90,
+          },
+          medium: {
+            url: "https://i.ytimg.com/vi/PhVQWwjZn54/mqdefault.jpg",
+            width: 320,
+            height: 180,
+          },
+          high: {
+            url: "https://i.ytimg.com/vi/PhVQWwjZn54/hqdefault.jpg",
+            width: 480,
+            height: 360,
+          },
+        },
+        channelTitle: "IT Maaz",
+        liveBroadcastContent: "none",
+        publishTime: "2025-06-17T11:14:18Z",
+      },
+    },
+    {
+      kind: "youtube#searchResult",
+      id: { kind: "youtube#video", videoId: "k67TwilE96c" },
+      snippet: {
+        publishedAt: "2025-04-25T10:30:36Z",
+        channelId: "UC9CVDlWqqKffGUaYUrqZdVQ",
+        title:
+          "2025 Trends That Look CHEAP #shorts #viral #shortvideo #viralvideo #trending #fashion #aesthetic",
+        description:
+          "Welcome to our channel We will show you the old money fashion style luxury habits and living We show the best color ...",
+        thumbnails: {
+          default: {
+            url: "https://i.ytimg.com/vi/k67TwilE96c/default.jpg",
+            width: 120,
+            height: 90,
+          },
+          medium: {
+            url: "https://i.ytimg.com/vi/k67TwilE96c/mqdefault.jpg",
+            width: 320,
+            height: 180,
+          },
+          high: {
+            url: "https://i.ytimg.com/vi/k67TwilE96c/hqdefault.jpg",
+            width: 480,
+            height: 360,
+          },
+        },
+        channelTitle: "Let’s Style It",
+        liveBroadcastContent: "none",
+        publishTime: "2025-04-25T10:30:36Z",
+      },
+    },
+    {
+      kind: "youtube#searchResult",
+      id: { kind: "youtube#video", videoId: "83vmIX4fyCQ" },
+      snippet: {
+        publishedAt: "2025-06-30T09:10:00Z",
+        channelId: "UCclGtccK0e6HJVKBDesyQ_A",
+        title:
+          "Cái trend dễ thương gì đâu  #xonhaBun #viral #comedy #trending #shorts",
+        description:
+          "Mình hi vọng rằng, Xó nhà bún sẽ được mọi người ghé thăm mỗi ngày, và nhận được thật nhiều niềm vui từ những câu chuyện ...",
+        thumbnails: {
+          default: {
+            url: "https://i.ytimg.com/vi/83vmIX4fyCQ/default.jpg",
+            width: 120,
+            height: 90,
+          },
+          medium: {
+            url: "https://i.ytimg.com/vi/83vmIX4fyCQ/mqdefault.jpg",
+            width: 320,
+            height: 180,
+          },
+          high: {
+            url: "https://i.ytimg.com/vi/83vmIX4fyCQ/hqdefault.jpg",
+            width: 480,
+            height: 360,
+          },
+        },
+        channelTitle: "Xó nhà Bún",
+        liveBroadcastContent: "none",
+        publishTime: "2025-06-30T09:10:00Z",
+      },
+    },
+    {
+      kind: "youtube#searchResult",
+      id: { kind: "youtube#video", videoId: "f4UAyV2Fwe4" },
+      snippet: {
+        publishedAt: "2023-09-03T16:38:25Z",
+        channelId: "UCtS1l80qTAbLMA0ASFSxjfw",
+        title:
+          "OUCH 😢😢😢 #makeup #makeupchallenge #prank #sfxmakeup #trends #makeuptrends #sfxartist",
+        description: "",
+        thumbnails: {
+          default: {
+            url: "https://i.ytimg.com/vi/f4UAyV2Fwe4/default.jpg",
+            width: 120,
+            height: 90,
+          },
+          medium: {
+            url: "https://i.ytimg.com/vi/f4UAyV2Fwe4/mqdefault.jpg",
+            width: 320,
+            height: 180,
+          },
+          high: {
+            url: "https://i.ytimg.com/vi/f4UAyV2Fwe4/hqdefault.jpg",
+            width: 480,
+            height: 360,
+          },
+        },
+        channelTitle: "Gee Esler-Box",
+        liveBroadcastContent: "none",
+        publishTime: "2023-09-03T16:38:25Z",
+      },
+    },
+    {
+      kind: "youtube#searchResult",
+      id: { kind: "youtube#video", videoId: "lB_CaUS4_xk" },
+      snippet: {
+        publishedAt: "2025-06-11T12:01:29Z",
+        channelId: "UCLradKsmF3BwrEeBwkcHAMg",
+        title:
+          "Wait till end😍 || #viralvideo #cricket#shortvideo #youtubeshorts #trending #trend #video #funny",
+        description:
+          "Wait till end   || #viralvideo #cricket#shortvideo #youtubeshorts #trending #trend #video #funny.",
+        thumbnails: {
+          default: {
+            url: "https://i.ytimg.com/vi/lB_CaUS4_xk/default.jpg",
+            width: 120,
+            height: 90,
+          },
+          medium: {
+            url: "https://i.ytimg.com/vi/lB_CaUS4_xk/mqdefault.jpg",
+            width: 320,
+            height: 180,
+          },
+          high: {
+            url: "https://i.ytimg.com/vi/lB_CaUS4_xk/hqdefault.jpg",
+            width: 480,
+            height: 360,
+          },
+        },
+        channelTitle: "kaizad kaif vlogs",
+        liveBroadcastContent: "none",
+        publishTime: "2025-06-11T12:01:29Z",
+      },
+    },
+    {
+      kind: "youtube#searchResult",
+      id: { kind: "youtube#video", videoId: "-DknZw1nqXM" },
+      snippet: {
+        publishedAt: "2025-06-21T09:30:01Z",
+        channelId: "UCd4G4KvRjdlSMrhFNSVRekQ",
+        title:
+          "Water Haldi trend effects special for india #trending #haldi #viral #shortsfeed",
+        description:
+          "Water Haldi trend effects special for india #trending #haldi #viral #shortsfeed water Haldi effects haldi se water lighting effects viral ...",
+        thumbnails: {
+          default: {
+            url: "https://i.ytimg.com/vi/-DknZw1nqXM/default.jpg",
+            width: 120,
+            height: 90,
+          },
+          medium: {
+            url: "https://i.ytimg.com/vi/-DknZw1nqXM/mqdefault.jpg",
+            width: 320,
+            height: 180,
+          },
+          high: {
+            url: "https://i.ytimg.com/vi/-DknZw1nqXM/hqdefault.jpg",
+            width: 480,
+            height: 360,
+          },
+        },
+        channelTitle: "Hacker way shorts",
+        liveBroadcastContent: "none",
+        publishTime: "2025-06-21T09:30:01Z",
+      },
+    },
+    {
+      kind: "youtube#searchResult",
+      id: { kind: "youtube#video", videoId: "RGE1NCewCXk" },
+      snippet: {
+        publishedAt: "2025-05-07T10:11:06Z",
+        channelId: "UC0F92X8YpGt3f1NFyvkPdYQ",
+        title: "Best Earrings design 👌 #trending #viralvideo #shorts",
+        description: "",
+        thumbnails: {
+          default: {
+            url: "https://i.ytimg.com/vi/RGE1NCewCXk/default.jpg",
+            width: 120,
+            height: 90,
+          },
+          medium: {
+            url: "https://i.ytimg.com/vi/RGE1NCewCXk/mqdefault.jpg",
+            width: 320,
+            height: 180,
+          },
+          high: {
+            url: "https://i.ytimg.com/vi/RGE1NCewCXk/hqdefault.jpg",
+            width: 480,
+            height: 360,
+          },
+        },
+        channelTitle: "FASHION AND TRENDS",
+        liveBroadcastContent: "none",
+        publishTime: "2025-05-07T10:11:06Z",
+      },
+    },
+    {
+      kind: "youtube#searchResult",
+      id: { kind: "youtube#video", videoId: "bAtLmZFPi7E" },
+      snippet: {
+        publishedAt: "2025-06-20T09:03:13Z",
+        channelId: "UCY4jaFfhlM_JnAtYYEEhGig",
+        title:
+          "New Trending Water Magic | Latest Viral Water Glass Turmeric Glow #trending #watermagic #satisfying",
+        description:
+          "Discover the latest viral water magic trend that's taking over social media! ✨ Whether you've seen the turmeric glow water hack, ...",
+        thumbnails: {
+          default: {
+            url: "https://i.ytimg.com/vi/bAtLmZFPi7E/default.jpg",
+            width: 120,
+            height: 90,
+          },
+          medium: {
+            url: "https://i.ytimg.com/vi/bAtLmZFPi7E/mqdefault.jpg",
+            width: 320,
+            height: 180,
+          },
+          high: {
+            url: "https://i.ytimg.com/vi/bAtLmZFPi7E/hqdefault.jpg",
+            width: 480,
+            height: 360,
+          },
+        },
+        channelTitle: "WoW Lands",
+        liveBroadcastContent: "none",
+        publishTime: "2025-06-20T09:03:13Z",
+      },
+    },
+    {
+      kind: "youtube#searchResult",
+      id: { kind: "youtube#channel", channelId: "UC5eDiyFKURwCFAhOrA4wq-A" },
+      snippet: {
+        publishedAt: "2019-09-30T21:02:37Z",
+        channelId: "UC5eDiyFKURwCFAhOrA4wq-A",
+        title: "TRENDING",
+        description:
+          "Kanal Trending je sve što ste ikada želeli da znate o poznatim ličnostima, zanimljivostima, modi, trendovima i još mnogo toga!",
+        thumbnails: {
+          default: {
+            url: "https://yt3.ggpht.com/4bHrXBOlA5j0oHt5wAGP4YHlW8IMwgEZeKwsFDxz3FzuLrfHaaa7AnItTLFBif7JOPXU0cdH0A=s88-c-k-c0xffffffff-no-rj-mo",
+          },
+          medium: {
+            url: "https://yt3.ggpht.com/4bHrXBOlA5j0oHt5wAGP4YHlW8IMwgEZeKwsFDxz3FzuLrfHaaa7AnItTLFBif7JOPXU0cdH0A=s240-c-k-c0xffffffff-no-rj-mo",
+          },
+          high: {
+            url: "https://yt3.ggpht.com/4bHrXBOlA5j0oHt5wAGP4YHlW8IMwgEZeKwsFDxz3FzuLrfHaaa7AnItTLFBif7JOPXU0cdH0A=s800-c-k-c0xffffffff-no-rj-mo",
+          },
+        },
+        channelTitle: "TRENDING",
+        liveBroadcastContent: "none",
+        publishTime: "2019-09-30T21:02:37Z",
+      },
+    },
+    {
+      kind: "youtube#searchResult",
+      id: { kind: "youtube#video", videoId: "hihaIlAegsU" },
+      snippet: {
+        publishedAt: "2025-05-25T03:45:00Z",
+        channelId: "UCbJncen5txf9VNqAcIBxvUA",
+        title: "Best tiktok videos 😻🎉🥳#trending#shorts",
+        description: "",
+        thumbnails: {
+          default: {
+            url: "https://i.ytimg.com/vi/hihaIlAegsU/default.jpg",
+            width: 120,
+            height: 90,
+          },
+          medium: {
+            url: "https://i.ytimg.com/vi/hihaIlAegsU/mqdefault.jpg",
+            width: 320,
+            height: 180,
+          },
+          high: {
+            url: "https://i.ytimg.com/vi/hihaIlAegsU/hqdefault.jpg",
+            width: 480,
+            height: 360,
+          },
+        },
+        channelTitle: "Best Tiktok Videos",
+        liveBroadcastContent: "none",
+        publishTime: "2025-05-25T03:45:00Z",
+      },
+    },
+    {
+      kind: "youtube#searchResult",
+      id: { kind: "youtube#video", videoId: "v04OkBf7STI" },
+      snippet: {
+        publishedAt: "2024-08-18T10:52:42Z",
+        channelId: "UCgxKbwD8snjkKv6uUpddcIA",
+        title:
+          "KALOGERAS SISTER TREND 💃💃💃#edit #trending #tiktok #challenge #music #dance #explore",
+        description: "",
+        thumbnails: {
+          default: {
+            url: "https://i.ytimg.com/vi/v04OkBf7STI/default.jpg",
+            width: 120,
+            height: 90,
+          },
+          medium: {
+            url: "https://i.ytimg.com/vi/v04OkBf7STI/mqdefault.jpg",
+            width: 320,
+            height: 180,
+          },
+          high: {
+            url: "https://i.ytimg.com/vi/v04OkBf7STI/hqdefault.jpg",
+            width: 480,
+            height: 360,
+          },
+        },
+        channelTitle: "midoeditz ",
+        liveBroadcastContent: "none",
+        publishTime: "2024-08-18T10:52:42Z",
+      },
+    },
+    {
+      kind: "youtube#searchResult",
+      id: { kind: "youtube#video", videoId: "cS5qlzT-EVI" },
+      snippet: {
+        publishedAt: "2025-03-11T23:21:57Z",
+        channelId: "UCTHzGyYKcRkd6ls06I5UNow",
+        title: "The CRAZIEST questions! #scarlett #trends #dance",
+        description:
+          "scarlettgray #scarlettandtiania #youtubeshorts #shortsfeed #shortsvideoviral #trend #dancetrends #tiktok Scarlett and Tiania ...",
+        thumbnails: {
+          default: {
+            url: "https://i.ytimg.com/vi/cS5qlzT-EVI/default.jpg",
+            width: 120,
+            height: 90,
+          },
+          medium: {
+            url: "https://i.ytimg.com/vi/cS5qlzT-EVI/mqdefault.jpg",
+            width: 320,
+            height: 180,
+          },
+          high: {
+            url: "https://i.ytimg.com/vi/cS5qlzT-EVI/hqdefault.jpg",
+            width: 480,
+            height: 360,
+          },
+        },
+        channelTitle: "Scarlett and Tiania",
+        liveBroadcastContent: "none",
+        publishTime: "2025-03-11T23:21:57Z",
+      },
+    },
+    {
+      kind: "youtube#searchResult",
+      id: { kind: "youtube#video", videoId: "A1YH_DuWD_I" },
+      snippet: {
+        publishedAt: "2025-04-03T13:04:14Z",
+        channelId: "UCMvzIGDCIwGNdm3dMi0yzZg",
+        title:
+          "Like JENNIE!🖤#youtubeshorts #dance #trending #song #shortvideo #viralvideo #shorts #kpop #jennie",
+        description: "",
+        thumbnails: {
+          default: {
+            url: "https://i.ytimg.com/vi/A1YH_DuWD_I/default.jpg",
+            width: 120,
+            height: 90,
+          },
+          medium: {
+            url: "https://i.ytimg.com/vi/A1YH_DuWD_I/mqdefault.jpg",
+            width: 320,
+            height: 180,
+          },
+          high: {
+            url: "https://i.ytimg.com/vi/A1YH_DuWD_I/hqdefault.jpg",
+            width: 480,
+            height: 360,
+          },
+        },
+        channelTitle: "Harshada Shraddha ",
+        liveBroadcastContent: "none",
+        publishTime: "2025-04-03T13:04:14Z",
+      },
+    },
+    {
+      kind: "youtube#searchResult",
+      id: { kind: "youtube#video", videoId: "DF60aPfxJFY" },
+      snippet: {
+        publishedAt: "2023-06-01T09:46:11Z",
+        channelId: "UCcrOcXALUsDWozz3p7mFiSg",
+        title: "Dei V, Myke Towers - Trending Remix (Letra/Lyrics)",
+        description: "Dei V, Myke Towers - Trending Remix (Letra/Lyrics)",
+        thumbnails: {
+          default: {
+            url: "https://i.ytimg.com/vi/DF60aPfxJFY/default.jpg",
+            width: 120,
+            height: 90,
+          },
+          medium: {
+            url: "https://i.ytimg.com/vi/DF60aPfxJFY/mqdefault.jpg",
+            width: 320,
+            height: 180,
+          },
+          high: {
+            url: "https://i.ytimg.com/vi/DF60aPfxJFY/hqdefault.jpg",
+            width: 480,
+            height: 360,
+          },
+        },
+        channelTitle: "Verses & Vibes",
+        liveBroadcastContent: "none",
+        publishTime: "2023-06-01T09:46:11Z",
+      },
+    },
+    {
+      kind: "youtube#searchResult",
+      id: { kind: "youtube#video", videoId: "tOA8LDqE7oo" },
+      snippet: {
+        publishedAt: "2025-02-09T15:50:38Z",
+        channelId: "UC_bwpBElTcWlY0pOQzZ6kyg",
+        title:
+          "What do y&#39;all think of this trend 🤔 #moneytalks #trending #edit",
+        description: "",
+        thumbnails: {
+          default: {
+            url: "https://i.ytimg.com/vi/tOA8LDqE7oo/default.jpg",
+            width: 120,
+            height: 90,
+          },
+          medium: {
+            url: "https://i.ytimg.com/vi/tOA8LDqE7oo/mqdefault.jpg",
+            width: 320,
+            height: 180,
+          },
+          high: {
+            url: "https://i.ytimg.com/vi/tOA8LDqE7oo/hqdefault.jpg",
+            width: 480,
+            height: 360,
+          },
+        },
+        channelTitle: "Daytee Editz Trends",
+        liveBroadcastContent: "none",
+        publishTime: "2025-02-09T15:50:38Z",
+      },
+    },
+    {
+      kind: "youtube#searchResult",
+      id: { kind: "youtube#video", videoId: "HKk4lfMfyyk" },
+      snippet: {
+        publishedAt: "2025-05-31T16:58:40Z",
+        channelId: "UC8lk1PidR1QY0jlphsYJqtw",
+        title: "who did it best? 💛#shorts #viralshort #tiktok",
+        description:
+          "Yellow hearts is viral on tiktok Which rock squad member did the trend best? Also we love @LikeNastyaofficial @Nastya it's the ...",
+        thumbnails: {
+          default: {
+            url: "https://i.ytimg.com/vi/HKk4lfMfyyk/default.jpg",
+            width: 120,
+            height: 90,
+          },
+          medium: {
+            url: "https://i.ytimg.com/vi/HKk4lfMfyyk/mqdefault.jpg",
+            width: 320,
+            height: 180,
+          },
+          high: {
+            url: "https://i.ytimg.com/vi/HKk4lfMfyyk/hqdefault.jpg",
+            width: 480,
+            height: 360,
+          },
+        },
+        channelTitle: "ROCK SQUAD",
+        liveBroadcastContent: "none",
+        publishTime: "2025-05-31T16:58:40Z",
+      },
+    },
+    {
+      kind: "youtube#searchResult",
+      id: { kind: "youtube#video", videoId: "tutzXUx6XXA" },
+      snippet: {
+        publishedAt: "2025-06-18T11:58:41Z",
+        channelId: "UCXAGCjzJ16PDcC_t8ALnKGw",
+        title:
+          "Rate this transition 1-10!! #makeup #beauty #makeupartist #makeuptutorial #shorts #trending #trend",
+        description: "",
+        thumbnails: {
+          default: {
+            url: "https://i.ytimg.com/vi/tutzXUx6XXA/default.jpg",
+            width: 120,
+            height: 90,
+          },
+          medium: {
+            url: "https://i.ytimg.com/vi/tutzXUx6XXA/mqdefault.jpg",
+            width: 320,
+            height: 180,
+          },
+          high: {
+            url: "https://i.ytimg.com/vi/tutzXUx6XXA/hqdefault.jpg",
+            width: 480,
+            height: 360,
+          },
+        },
+        channelTitle: "Tyler Schmitt",
+        liveBroadcastContent: "none",
+        publishTime: "2025-06-18T11:58:41Z",
+      },
+    },
+    {
+      kind: "youtube#searchResult",
+      id: { kind: "youtube#video", videoId: "LyiM7FYby8I" },
+      snippet: {
+        publishedAt: "2025-07-11T15:30:26Z",
+        channelId: "UCUeHUOy5fwWXaCJwzw-UiPw",
+        title: "Bugatti trend gone Wrong 😭😂 #shorts #trending #bugatti",
+        description: "",
+        thumbnails: {
+          default: {
+            url: "https://i.ytimg.com/vi/LyiM7FYby8I/default.jpg",
+            width: 120,
+            height: 90,
+          },
+          medium: {
+            url: "https://i.ytimg.com/vi/LyiM7FYby8I/mqdefault.jpg",
+            width: 320,
+            height: 180,
+          },
+          high: {
+            url: "https://i.ytimg.com/vi/LyiM7FYby8I/hqdefault.jpg",
+            width: 480,
+            height: 360,
+          },
+        },
+        channelTitle: "The Savage Square",
+        liveBroadcastContent: "none",
+        publishTime: "2025-07-11T15:30:26Z",
+      },
+    },
+    {
+      kind: "youtube#searchResult",
+      id: { kind: "youtube#video", videoId: "JEV210XLDoY" },
+      snippet: {
+        publishedAt: "2025-03-06T13:12:22Z",
+        channelId: "UCmMc_GEf8CNJ6FWwos0mTmw",
+        title:
+          "Challenge Accepted 😎😮‍💨🫠 #trending #shorts #catchysmells #itmaaz #perfumer #youtuber",
+        description: "",
+        thumbnails: {
+          default: {
+            url: "https://i.ytimg.com/vi/JEV210XLDoY/default.jpg",
+            width: 120,
+            height: 90,
+          },
+          medium: {
+            url: "https://i.ytimg.com/vi/JEV210XLDoY/mqdefault.jpg",
+            width: 320,
+            height: 180,
+          },
+          high: {
+            url: "https://i.ytimg.com/vi/JEV210XLDoY/hqdefault.jpg",
+            width: 480,
+            height: 360,
+          },
+        },
+        channelTitle: "IT Maaz",
+        liveBroadcastContent: "none",
+        publishTime: "2025-03-06T13:12:22Z",
+      },
+    },
+    {
+      kind: "youtube#searchResult",
+      id: { kind: "youtube#video", videoId: "IPQmbaSA37c" },
+      snippet: {
+        publishedAt: "2025-06-02T11:00:35Z",
+        channelId: "UChTxjbj3hEnqg8ChhEhA6Sg",
+        title:
+          "Love as no age in Monaco #billionaire #monaco #luxury #trending #lifestyle #fyp",
+        description: "",
+        thumbnails: {
+          default: {
+            url: "https://i.ytimg.com/vi/IPQmbaSA37c/default.jpg",
+            width: 120,
+            height: 90,
+          },
+          medium: {
+            url: "https://i.ytimg.com/vi/IPQmbaSA37c/mqdefault.jpg",
+            width: 320,
+            height: 180,
+          },
+          high: {
+            url: "https://i.ytimg.com/vi/IPQmbaSA37c/hqdefault.jpg",
+            width: 480,
+            height: 360,
+          },
+        },
+        channelTitle: "Pistons Brothers",
+        liveBroadcastContent: "none",
+        publishTime: "2025-06-02T11:00:35Z",
+      },
+    },
+    {
+      kind: "youtube#searchResult",
+      id: { kind: "youtube#video", videoId: "s3wnvH5n9Gw" },
+      snippet: {
+        publishedAt: "2025-07-09T11:44:24Z",
+        channelId: "UCzee67JnEcuvjErRyWP3GpQ",
+        title:
+          "Trending - Official Trailer | Kalaiyarasan, Priyalaya | Sivaraj | Sam C.S.",
+        description:
+          "For more latest songs & videos, subscribe https://bit.ly/Saregama_Tamil Presenting the official trailer of 'Trending' starring ...",
+        thumbnails: {
+          default: {
+            url: "https://i.ytimg.com/vi/s3wnvH5n9Gw/default.jpg",
+            width: 120,
+            height: 90,
+          },
+          medium: {
+            url: "https://i.ytimg.com/vi/s3wnvH5n9Gw/mqdefault.jpg",
+            width: 320,
+            height: 180,
+          },
+          high: {
+            url: "https://i.ytimg.com/vi/s3wnvH5n9Gw/hqdefault.jpg",
+            width: 480,
+            height: 360,
+          },
+        },
+        channelTitle: "Saregama Tamil",
+        liveBroadcastContent: "none",
+        publishTime: "2025-07-09T11:44:24Z",
+      },
+    },
+    {
+      kind: "youtube#searchResult",
+      id: { kind: "youtube#video", videoId: "Fwn0w91hTzo" },
+      snippet: {
+        publishedAt: "2025-05-24T23:41:41Z",
+        channelId: "UCv9eESCQ1FUupTWxBVxGdEA",
+        title:
+          "Glow House🩷 #trendy #trending #embreighcourtlynn #glowhouse #fypage #funny #presleefaith",
+        description:
+          "Glow House   #trendy #trending #embreighcourtlynn #glowhouse #fypage #funny #presleefaith #foryoupage #ayiahsoufi.",
+        thumbnails: {
+          default: {
+            url: "https://i.ytimg.com/vi/Fwn0w91hTzo/default.jpg",
+            width: 120,
+            height: 90,
+          },
+          medium: {
+            url: "https://i.ytimg.com/vi/Fwn0w91hTzo/mqdefault.jpg",
+            width: 320,
+            height: 180,
+          },
+          high: {
+            url: "https://i.ytimg.com/vi/Fwn0w91hTzo/hqdefault.jpg",
+            width: 480,
+            height: 360,
+          },
+        },
+        channelTitle: "Ayiah Soufi",
+        liveBroadcastContent: "none",
+        publishTime: "2025-05-24T23:41:41Z",
+      },
+    },
+    {
+      kind: "youtube#searchResult",
+      id: { kind: "youtube#video", videoId: "0-fTAqYCiPc" },
+      snippet: {
+        publishedAt: "2025-03-26T13:21:14Z",
+        channelId: "UC7lYefsdDK-EXeZFtctdwfg",
+        title:
+          "New Christian dance trend❤️❤️!! #dance #tiktok #trending #shorts #fyp #christian #music",
+        description: "",
+        thumbnails: {
+          default: {
+            url: "https://i.ytimg.com/vi/0-fTAqYCiPc/default.jpg",
+            width: 120,
+            height: 90,
+          },
+          medium: {
+            url: "https://i.ytimg.com/vi/0-fTAqYCiPc/mqdefault.jpg",
+            width: 320,
+            height: 180,
+          },
+          high: {
+            url: "https://i.ytimg.com/vi/0-fTAqYCiPc/hqdefault.jpg",
+            width: 480,
+            height: 360,
+          },
+        },
+        channelTitle: "Short Trends",
+        liveBroadcastContent: "none",
+        publishTime: "2025-03-26T13:21:14Z",
+      },
+    },
+    {
+      kind: "youtube#searchResult",
+      id: { kind: "youtube#video", videoId: "4rFxk8W9yUg" },
+      snippet: {
+        publishedAt: "2025-01-16T08:00:08Z",
+        channelId: "UCZurPamOJo4tYeHGIyWb19A",
+        title: "Top 10 Interior Design Trends for 2025",
+        description:
+          "Trends you'll be seeing everywhere in Interiors in 2025 WANT MORE INSPO? GET OUR BOOK ...",
+        thumbnails: {
+          default: {
+            url: "https://i.ytimg.com/vi/4rFxk8W9yUg/default.jpg",
+            width: 120,
+            height: 90,
+          },
+          medium: {
+            url: "https://i.ytimg.com/vi/4rFxk8W9yUg/mqdefault.jpg",
+            width: 320,
+            height: 180,
+          },
+          high: {
+            url: "https://i.ytimg.com/vi/4rFxk8W9yUg/hqdefault.jpg",
+            width: 480,
+            height: 360,
+          },
+        },
+        channelTitle: "Hunting for George",
+        liveBroadcastContent: "none",
+        publishTime: "2025-01-16T08:00:08Z",
+      },
+    },
+  ],
+};
+
 export const videosResponse = {
   kind: "youtube#searchListResponse",
   nextPageToken: "CBgQAA",
