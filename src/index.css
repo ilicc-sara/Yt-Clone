@@ -27,6 +27,16 @@ nav {
   margin-bottom: 30px;
 }
 
+.home-link {
+  text-decoration: none;
+  color: white;
+}
+
+.not-found {
+  font-size: 18px;
+  padding: 20px;
+}
+
 .yt-logo {
   display: flex;
   align-items: center;
