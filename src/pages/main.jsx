@@ -1,11 +1,11 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "./index.css";
-import App from "./pages/App.jsx";
-import Home from "./pages/Home.jsx";
-import NotFoundPage from "./pages/NotFoundPage.jsx";
-import MainLayout from "./layouts/MainLayout.jsx";
-import Video from "./pages/Video.jsx";
+import "../index.css";
+import App from "./App.jsx";
+import Home from "./Home.jsx";
+import NotFoundPage from "./NotFoundPage.jsx";
+import MainLayout from "../layouts/MainLayout.jsx";
+import Video from "./Video.jsx";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
