@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Outlet } from "react-router-dom";
-import Home from "../Home";
-import App from "../App";
+import Home from "../pages/Home";
+import App from "../pages/App";
 import { categories } from "../data";
 
 function MainLayout() {

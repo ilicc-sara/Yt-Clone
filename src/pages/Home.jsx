@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import Videos from "./Videos";
+import Videos from "../Videos";
 import {
   QueryClient,
   QueryClientProvider,
   useQuery,
 } from "@tanstack/react-query";
-import { categories } from "./data";
+import { categories } from "../data";
 import { useOutletContext } from "react-router-dom";
 import LogRocket from "logrocket";
 
