@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../App.css";
+import "@/App.css";
 import { Link } from "react-router-dom";
 
 function App() {
@@ -35,8 +35,6 @@ function App() {
           <button className="btn-input">🔎</button>
         </form>
       </nav>
-
-      {/* <Home /> */}
     </>
   );
 }

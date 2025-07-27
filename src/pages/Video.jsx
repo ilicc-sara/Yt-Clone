@@ -2,10 +2,10 @@ import { useParams } from "react-router-dom";
 import React from "react";
 import { useQuery } from "@tanstack/react-query";
 import YouTube from "react-youtube";
-import Videos from "../components/Videos";
-import Comments from "../components/Comments";
+import Videos from "@/components/Videos";
+import Comments from "@/components/Comments";
 
-function Video(props) {
+function Video() {
   const params = useParams();
 
   const videoQuery = useQuery({

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Videos from "../components/Videos";
+import Videos from "@/components/Videos";
 import { useQuery } from "@tanstack/react-query";
-import { categories } from "../assets/data";
+import { categories } from "@/assets/data";
 import { useOutletContext } from "react-router-dom";
 import LogRocket from "logrocket";
 
