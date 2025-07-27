@@ -2,15 +2,18 @@ import { useState } from "react";
 import "@/App.css";
 import { Link } from "react-router-dom";
 
-function App() {
+function App(props) {
   const [input, setInput] = useState("");
-  // const { id, setId } = useOutletContext();
 
-  // function submitForm(e) {
-  //   e.preventDefault();
-  //   setId(input);
-  //   setInput("");
-  // }
+  const { id, setId } = props;
+
+  function submitForm(e) {
+    e.preventDefault();
+    setId(input);
+    setInput("");
+  }
+
+  console.log(id);
 
   return (
     <>
@@ -24,7 +27,7 @@ function App() {
           </div>
         </Link>
 
-        <form className="search-form">
+        <form onSubmit={submitForm} className="search-form">
           <input
             className="search-input"
             type="text"

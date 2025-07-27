@@ -1,5 +1,3 @@
-import React from "react";
-
 function Article(props) {
   const { thumbnail, title, chanel, time } = props;
 

@@ -8,7 +8,7 @@ function MainLayout() {
 
   return (
     <>
-      <App />
+      <App id={id} setId={setId} />
       <Outlet context={{ id, setId }} />
     </>
   );

@@ -1,6 +1,5 @@
-import React from "react";
 import Article from "./Article";
-import { formatDistance, subDays, formatDistanceToNow } from "date-fns";
+import { formatDistanceToNow } from "date-fns";
 import { Link } from "react-router-dom";
 
 function formatDate(string) {

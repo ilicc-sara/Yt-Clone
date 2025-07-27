@@ -26,16 +26,11 @@ const router = createBrowserRouter([
       },
     ],
   },
-  // {
-  //   path: "/video/:videoId",
-  //   element: <Video />,
-  // },
 ]);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
-      {/* <App /> */}
       <RouterProvider router={router} />
     </QueryClientProvider>
   </StrictMode>

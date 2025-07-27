@@ -1,5 +1,4 @@
-import React from "react";
-import { formatDistance, subDays, formatDistanceToNow } from "date-fns";
+import { formatDistanceToNow } from "date-fns";
 
 function formatDate(string) {
   const index = string.indexOf("T");
