@@ -319,3 +319,10 @@ aside {
   flex-direction: column;
   gap: 20px;
 }
+
+/* Channel Page */
+
+.channel-videos-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}

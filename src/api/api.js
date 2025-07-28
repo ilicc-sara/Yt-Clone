@@ -1,3 +1,351 @@
+export const channelVideosResponse = {
+  kind: "youtube#searchListResponse",
+  regionCode: "DE",
+  pageInfo: { totalResults: 12, resultsPerPage: 11 },
+  items: [
+    {
+      kind: "youtube#searchResult",
+      id: { kind: "youtube#video", videoId: "p6fNH0yS8UU" },
+      snippet: {
+        publishedAt: "2025-07-27T16:22:17Z",
+        channelId: "UC5eDiyFKURwCFAhOrA4wq-A",
+        title: "TRUDNA MILICA TODOROVIĆ",
+        description: "",
+        thumbnails: {
+          default: {
+            url: "https://i.ytimg.com/vi/p6fNH0yS8UU/default.jpg",
+            width: 120,
+            height: 90,
+          },
+          medium: {
+            url: "https://i.ytimg.com/vi/p6fNH0yS8UU/mqdefault.jpg",
+            width: 320,
+            height: 180,
+          },
+          high: {
+            url: "https://i.ytimg.com/vi/p6fNH0yS8UU/hqdefault.jpg",
+            width: 480,
+            height: 360,
+          },
+        },
+        channelTitle: "TRENDING",
+        liveBroadcastContent: "none",
+        publishTime: "2025-07-27T16:22:17Z",
+      },
+    },
+    {
+      kind: "youtube#searchResult",
+      id: { kind: "youtube#video", videoId: "x7Lgd4PhTFQ" },
+      snippet: {
+        publishedAt: "2025-07-27T16:05:29Z",
+        channelId: "UC5eDiyFKURwCFAhOrA4wq-A",
+        title:
+          "DRAMA NEDELJE: Trudna Milica Todorović - Karleusa Vs Bekvalac, Ana Ivanović Razvod",
+        description:
+          "Ne zaboravite da se subskrabujete na Trending I da lajkujete ovaj video :) Subskrajbujte se na naš drugi kanał Trending News ...",
+        thumbnails: {
+          default: {
+            url: "https://i.ytimg.com/vi/x7Lgd4PhTFQ/default.jpg",
+            width: 120,
+            height: 90,
+          },
+          medium: {
+            url: "https://i.ytimg.com/vi/x7Lgd4PhTFQ/mqdefault.jpg",
+            width: 320,
+            height: 180,
+          },
+          high: {
+            url: "https://i.ytimg.com/vi/x7Lgd4PhTFQ/hqdefault.jpg",
+            width: 480,
+            height: 360,
+          },
+        },
+        channelTitle: "TRENDING",
+        liveBroadcastContent: "none",
+        publishTime: "2025-07-27T16:05:29Z",
+      },
+    },
+    {
+      kind: "youtube#searchResult",
+      id: { kind: "youtube#video", videoId: "aui9S_YEd60" },
+      snippet: {
+        publishedAt: "2025-07-26T15:12:52Z",
+        channelId: "UC5eDiyFKURwCFAhOrA4wq-A",
+        title: "TRUDNA MILICA TODOROVIĆ: Ko Je Muškarac Sa Kojim Čeka Dete",
+        description:
+          "Ne zaboravite da se subskrabujete na Trending I da lajkujete ovaj video :) Subskrajbujte se na naš drugi kanał Trending News ...",
+        thumbnails: {
+          default: {
+            url: "https://i.ytimg.com/vi/aui9S_YEd60/default.jpg",
+            width: 120,
+            height: 90,
+          },
+          medium: {
+            url: "https://i.ytimg.com/vi/aui9S_YEd60/mqdefault.jpg",
+            width: 320,
+            height: 180,
+          },
+          high: {
+            url: "https://i.ytimg.com/vi/aui9S_YEd60/hqdefault.jpg",
+            width: 480,
+            height: 360,
+          },
+        },
+        channelTitle: "TRENDING",
+        liveBroadcastContent: "none",
+        publishTime: "2025-07-26T15:12:52Z",
+      },
+    },
+    {
+      kind: "youtube#searchResult",
+      id: { kind: "youtube#video", videoId: "QFFutQ3Hyrc" },
+      snippet: {
+        publishedAt: "2025-07-25T14:07:58Z",
+        channelId: "UC5eDiyFKURwCFAhOrA4wq-A",
+        title: "Karleuša Žestoko Napala Natašu Bekvalac: Novi Rat Na Estradi",
+        description:
+          "Ne zaboravite da se subskrabujete na Trending I da lajkujete ovaj video :) Subskrajbujte se na naš drugi kanał Trending News ...",
+        thumbnails: {
+          default: {
+            url: "https://i.ytimg.com/vi/QFFutQ3Hyrc/default.jpg",
+            width: 120,
+            height: 90,
+          },
+          medium: {
+            url: "https://i.ytimg.com/vi/QFFutQ3Hyrc/mqdefault.jpg",
+            width: 320,
+            height: 180,
+          },
+          high: {
+            url: "https://i.ytimg.com/vi/QFFutQ3Hyrc/hqdefault.jpg",
+            width: 480,
+            height: 360,
+          },
+        },
+        channelTitle: "TRENDING",
+        liveBroadcastContent: "none",
+        publishTime: "2025-07-25T14:07:58Z",
+      },
+    },
+    {
+      kind: "youtube#searchResult",
+      id: { kind: "youtube#video", videoId: "-Uea7X4adgA" },
+      snippet: {
+        publishedAt: "2025-07-24T14:37:28Z",
+        channelId: "UC5eDiyFKURwCFAhOrA4wq-A",
+        title:
+          "RAZVELI SE ANA IVANOVIĆ I BASTIJAN ŠVAJNŠTAJGER: Evo Šta Je Razlog",
+        description:
+          "Ne zaboravite da se subskrabujete na Trending I da lajkujete ovaj video :) Subskrajbujte se na naš drugi kanał Trending News ...",
+        thumbnails: {
+          default: {
+            url: "https://i.ytimg.com/vi/-Uea7X4adgA/default.jpg",
+            width: 120,
+            height: 90,
+          },
+          medium: {
+            url: "https://i.ytimg.com/vi/-Uea7X4adgA/mqdefault.jpg",
+            width: 320,
+            height: 180,
+          },
+          high: {
+            url: "https://i.ytimg.com/vi/-Uea7X4adgA/hqdefault.jpg",
+            width: 480,
+            height: 360,
+          },
+        },
+        channelTitle: "TRENDING",
+        liveBroadcastContent: "none",
+        publishTime: "2025-07-24T14:37:28Z",
+      },
+    },
+    {
+      kind: "youtube#searchResult",
+      id: { kind: "youtube#video", videoId: "KY29Aqn5vFA" },
+      snippet: {
+        publishedAt: "2025-07-07T17:50:43Z",
+        channelId: "UC5eDiyFKURwCFAhOrA4wq-A",
+        title: "KARLEUŠA BRUTALNO O KONCERTU THOMPSONA",
+        description: "",
+        thumbnails: {
+          default: {
+            url: "https://i.ytimg.com/vi/KY29Aqn5vFA/default.jpg",
+            width: 120,
+            height: 90,
+          },
+          medium: {
+            url: "https://i.ytimg.com/vi/KY29Aqn5vFA/mqdefault.jpg",
+            width: 320,
+            height: 180,
+          },
+          high: {
+            url: "https://i.ytimg.com/vi/KY29Aqn5vFA/hqdefault.jpg",
+            width: 480,
+            height: 360,
+          },
+        },
+        channelTitle: "TRENDING",
+        liveBroadcastContent: "none",
+        publishTime: "2025-07-07T17:50:43Z",
+      },
+    },
+    {
+      kind: "youtube#searchResult",
+      id: { kind: "youtube#video", videoId: "lzSugMBDjtc" },
+      snippet: {
+        publishedAt: "2025-04-30T15:48:40Z",
+        channelId: "UC5eDiyFKURwCFAhOrA4wq-A",
+        title: "STA JEDE IVANKA TRAMP?",
+        description: "",
+        thumbnails: {
+          default: {
+            url: "https://i.ytimg.com/vi/lzSugMBDjtc/default.jpg",
+            width: 120,
+            height: 90,
+          },
+          medium: {
+            url: "https://i.ytimg.com/vi/lzSugMBDjtc/mqdefault.jpg",
+            width: 320,
+            height: 180,
+          },
+          high: {
+            url: "https://i.ytimg.com/vi/lzSugMBDjtc/hqdefault.jpg",
+            width: 480,
+            height: 360,
+          },
+        },
+        channelTitle: "TRENDING",
+        liveBroadcastContent: "none",
+        publishTime: "2025-04-30T15:48:40Z",
+      },
+    },
+    {
+      kind: "youtube#searchResult",
+      id: { kind: "youtube#video", videoId: "LiOCTQbb71w" },
+      snippet: {
+        publishedAt: "2025-03-27T17:53:59Z",
+        channelId: "UC5eDiyFKURwCFAhOrA4wq-A",
+        title:
+          "Ronaldo KONAČNO PRIZNAO Zašto Ne Želi Da Oženi Georginu: Razlog Šokirao Sve",
+        description:
+          "Ne zaboravite da se subskrabujete na Trending I da lajkujete ovaj video :) Subskrajbujte se na naš drugi kanał Trending News ...",
+        thumbnails: {
+          default: {
+            url: "https://i.ytimg.com/vi/LiOCTQbb71w/default.jpg",
+            width: 120,
+            height: 90,
+          },
+          medium: {
+            url: "https://i.ytimg.com/vi/LiOCTQbb71w/mqdefault.jpg",
+            width: 320,
+            height: 180,
+          },
+          high: {
+            url: "https://i.ytimg.com/vi/LiOCTQbb71w/hqdefault.jpg",
+            width: 480,
+            height: 360,
+          },
+        },
+        channelTitle: "TRENDING",
+        liveBroadcastContent: "none",
+        publishTime: "2025-03-27T17:53:59Z",
+      },
+    },
+    {
+      kind: "youtube#searchResult",
+      id: { kind: "youtube#video", videoId: "FtyCSV4I4FU" },
+      snippet: {
+        publishedAt: "2025-03-04T17:08:31Z",
+        channelId: "UC5eDiyFKURwCFAhOrA4wq-A",
+        title: "Teška Životna Priča Saše Popovića: OD TRNJA DO ZVEZDA GRANDA",
+        description:
+          "Saša Popović, osnivač 'Zvezda Granda', preminuo je 1. marta 2025. u 70. godini. Iza njega je ostala neverovatna karijera, ali i ...",
+        thumbnails: {
+          default: {
+            url: "https://i.ytimg.com/vi/FtyCSV4I4FU/default.jpg",
+            width: 120,
+            height: 90,
+          },
+          medium: {
+            url: "https://i.ytimg.com/vi/FtyCSV4I4FU/mqdefault.jpg",
+            width: 320,
+            height: 180,
+          },
+          high: {
+            url: "https://i.ytimg.com/vi/FtyCSV4I4FU/hqdefault.jpg",
+            width: 480,
+            height: 360,
+          },
+        },
+        channelTitle: "TRENDING",
+        liveBroadcastContent: "none",
+        publishTime: "2025-03-04T17:08:31Z",
+      },
+    },
+    {
+      kind: "youtube#searchResult",
+      id: { kind: "youtube#video", videoId: "1TyIdjvcuQM" },
+      snippet: {
+        publishedAt: "2023-03-07T18:11:09Z",
+        channelId: "UC5eDiyFKURwCFAhOrA4wq-A",
+        title: "ŠTA JE ISTINA: Da li je Konstrakta TETKA Luke Black-a?",
+        description:
+          "Ne zaboravite da se subskrabujete na Trending I da lajkujete ovaj video :) Subskrajbujte se na naš drugi kanał Trending News ...",
+        thumbnails: {
+          default: {
+            url: "https://i.ytimg.com/vi/1TyIdjvcuQM/default.jpg",
+            width: 120,
+            height: 90,
+          },
+          medium: {
+            url: "https://i.ytimg.com/vi/1TyIdjvcuQM/mqdefault.jpg",
+            width: 320,
+            height: 180,
+          },
+          high: {
+            url: "https://i.ytimg.com/vi/1TyIdjvcuQM/hqdefault.jpg",
+            width: 480,
+            height: 360,
+          },
+        },
+        channelTitle: "TRENDING",
+        liveBroadcastContent: "none",
+        publishTime: "2023-03-07T18:11:09Z",
+      },
+    },
+    {
+      kind: "youtube#searchResult",
+      id: { kind: "youtube#video", videoId: "Egqyas1EwIs" },
+      snippet: {
+        publishedAt: "2023-01-25T16:01:09Z",
+        channelId: "UC5eDiyFKURwCFAhOrA4wq-A",
+        title: "Andjelina Džoli ljubi brata u usta",
+        description: "",
+        thumbnails: {
+          default: {
+            url: "https://i.ytimg.com/vi/Egqyas1EwIs/default.jpg",
+            width: 120,
+            height: 90,
+          },
+          medium: {
+            url: "https://i.ytimg.com/vi/Egqyas1EwIs/mqdefault.jpg",
+            width: 320,
+            height: 180,
+          },
+          high: {
+            url: "https://i.ytimg.com/vi/Egqyas1EwIs/hqdefault.jpg",
+            width: 480,
+            height: 360,
+          },
+        },
+        channelTitle: "TRENDING",
+        liveBroadcastContent: "none",
+        publishTime: "2023-01-25T16:01:09Z",
+      },
+    },
+  ],
+};
+
 export const channelResponse = {
   kind: "youtube#channelListResponse",
   pageInfo: { totalResults: 1, resultsPerPage: 5 },

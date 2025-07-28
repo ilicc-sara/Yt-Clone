@@ -1,7 +1,8 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
-import { channelResponse } from "@/api/api";
+import Videos from "../components/Videos";
+import { channelResponse, channelVideosResponse } from "@/api/api";
 
 function Channel(props) {
   const params = useParams();
@@ -11,7 +12,13 @@ function Channel(props) {
     queryFn: () => renderChannel(params.channelId),
   });
 
-  console.log(channelQuery.data?.items[0].snippet);
+  const channelVideosQuery = useQuery({
+    queryKey: ["channelVideos", params.channelId],
+    queryFn: () => renderChannelVideos(params.channelId),
+  });
+
+  // console.log(channelQuery.data?.items[0].snippet);
+  console.log(channelVideosQuery.data);
 
   return (
     <div className="clicked-channel-container">
@@ -22,7 +29,9 @@ function Channel(props) {
       <h1>{channelQuery.data?.items[0].snippet.title}</h1>
       <p> {channelQuery.data?.items[0].snippet.description} </p>
 
-      <div className="channel-videos-container"></div>
+      <div className="channel-videos-container">
+        <Videos data={channelVideosQuery.data} />
+      </div>
     </div>
   );
 }
@@ -41,6 +50,22 @@ const renderChannel = async (id) => {
   // return await response.json();
 
   return channelResponse;
+};
+
+const renderChannelVideos = async (id) => {
+  const channelVideosUrl = `https://youtube-v31.p.rapidapi.com/search?channelId=${id}&part=snippet,id&order=date&maxResults=34`;
+  // const options = {
+  //   method: "GET",
+  //   headers: {
+  //     "x-rapidapi-key": "96e63d6a9dmsh343f9a787999921p182641jsnb26da9452b9e",
+  //     "x-rapidapi-host": "youtube-v31.p.rapidapi.com",
+  //   },
+  // };
+
+  // const response = await fetch(channelVideosUrl, options);
+  // return await response.json();
+
+  return channelVideosResponse;
 };
 
 export default Channel;
