@@ -1,4 +1,5 @@
 import Article from "./Article";
+import ChannelArticle from "./ChannelArticle";
 import { formatDistanceToNow } from "date-fns";
 import { Link } from "react-router-dom";
 
@@ -34,18 +35,22 @@ function Videos(props) {
           className="link-channel-article"
           to={`/channel/${video.id.channelId}`}
         >
-          {/* {video.snippet.title} */}
-
-          <article className="channel-article" key={index}>
+          {/* <article className="channel-article" key={index}>
             <img
               className="channel-profile-picture"
               src={video.snippet.thumbnails.medium.url}
             />
             <p className="channel-title">{video.snippet.title}</p>
             <div className="description-cont">
-              <p>{video.snippet.description.slice(0, 120) + "..."}</p>
+              <p>{video.snippet.description.slice(0, 100) + "..."}</p>
             </div>
-          </article>
+          </article> */}
+          <ChannelArticle
+            key={index}
+            profilePicture={video.snippet.thumbnails.medium.url}
+            title={video.snippet.title}
+            description={video.snippet.description}
+          />
         </Link>
       );
     }
