@@ -19,6 +19,8 @@ function Channel(props) {
 
   return (
     <div className="clicked-channel-container">
+      {channelQuery.isPending && <h1>Loading...</h1>}
+      {channelQuery.error && <h1>Error</h1>}
       <img
         style={{ borderRadius: "222px" }}
         src={channelQuery.data?.items[0].snippet.thumbnails.medium.url}
@@ -35,7 +37,8 @@ function Channel(props) {
           {channelQuery.data?.items[0].snippet.title}'s{" "}
           <span className="channel-videos-span">videos</span>
         </h1>
-
+        {channelVideosQuery.isPending && <h1>Loading...</h1>}
+        {channelVideosQuery.error && <h1>Error</h1>}
         <Videos data={channelVideosQuery.data} />
       </div>
     </div>
@@ -43,35 +46,35 @@ function Channel(props) {
 }
 
 const renderChannel = async (id) => {
-  const channelDetailsUrl = `https://youtube-v31.p.rapidapi.com/channels?part=snippet,statistics&id=${id}`;
-  const options = {
-    method: "GET",
-    headers: {
-      "x-rapidapi-key": "96e63d6a9dmsh343f9a787999921p182641jsnb26da9452b9e",
-      "x-rapidapi-host": "youtube-v31.p.rapidapi.com",
-    },
-  };
+  // const channelDetailsUrl = `https://youtube-v31.p.rapidapi.com/channels?part=snippet,statistics&id=${id}`;
+  // const options = {
+  //   method: "GET",
+  //   headers: {
+  //     "x-rapidapi-key": "96e63d6a9dmsh343f9a787999921p182641jsnb26da9452b9e",
+  //     "x-rapidapi-host": "youtube-v31.p.rapidapi.com",
+  //   },
+  // };
 
-  const response = await fetch(channelDetailsUrl, options);
-  return await response.json();
+  // const response = await fetch(channelDetailsUrl, options);
+  // return await response.json();
 
-  // return channelResponse;
+  return channelResponse;
 };
 
 const renderChannelVideos = async (id) => {
-  const channelVideosUrl = `https://youtube-v31.p.rapidapi.com/search?channelId=${id}&part=snippet,id&order=date&maxResults=34`;
-  const options = {
-    method: "GET",
-    headers: {
-      "x-rapidapi-key": "96e63d6a9dmsh343f9a787999921p182641jsnb26da9452b9e",
-      "x-rapidapi-host": "youtube-v31.p.rapidapi.com",
-    },
-  };
+  // const channelVideosUrl = `https://youtube-v31.p.rapidapi.com/search?channelId=${id}&part=snippet,id&order=date&maxResults=34`;
+  // const options = {
+  //   method: "GET",
+  //   headers: {
+  //     "x-rapidapi-key": "96e63d6a9dmsh343f9a787999921p182641jsnb26da9452b9e",
+  //     "x-rapidapi-host": "youtube-v31.p.rapidapi.com",
+  //   },
+  // };
 
-  const response = await fetch(channelVideosUrl, options);
-  return await response.json();
+  // const response = await fetch(channelVideosUrl, options);
+  // return await response.json();
 
-  // return channelVideosResponse;
+  return channelVideosResponse;
 };
 
 export default Channel;

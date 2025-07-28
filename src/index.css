@@ -35,6 +35,26 @@ nav {
 .not-found {
   font-size: 18px;
   padding: 20px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(216, 11, 0);
+  padding: 5px 20px;
+  border-radius: 5px;
+}
+
+/* Not Found Page  */
+.not-found-page {
+  background-color: rgba(255, 255, 255, 0.863);
+  width: 600px;
+  margin: 20vh auto;
+  border-radius: 10px;
+  color: black;
+  font-size: 18px;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }
 
 .yt-logo {

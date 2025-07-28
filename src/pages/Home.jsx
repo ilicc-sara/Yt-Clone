@@ -22,6 +22,7 @@ function Home() {
 
       <main className="video-container">
         {isPending && <h1>Loading...</h1>}
+        {error && <h1>Error</h1>}
         {data && (
           <h1 className="displayed-videos">
             {id} <span className="videos-span">videos</span>
@@ -35,19 +36,19 @@ function Home() {
 }
 
 const renderVideos = async (id) => {
-  const url = `https://youtube-v31.p.rapidapi.com/search?q=${id}&part=snippet,id&maxResults=24&regionCode=US`;
-  const Channelurl = `https://youtube-v31.p.rapidapi.com/channels?part=snippet,statistics&id=UCX6OQ3DkcsbYNE6H8uQQuVA`;
-  const options = {
-    method: "GET",
-    headers: {
-      "x-rapidapi-key": "96e63d6a9dmsh343f9a787999921p182641jsnb26da9452b9e",
-      "x-rapidapi-host": "youtube-v31.p.rapidapi.com",
-    },
-  };
-  const response = await fetch(url, options);
-  return await response.json();
+  // const url = `https://youtube-v31.p.rapidapi.com/search?q=${id}&part=snippet,id&maxResults=24&regionCode=US`;
+  // const Channelurl = `https://youtube-v31.p.rapidapi.com/channels?part=snippet,statistics&id=UCX6OQ3DkcsbYNE6H8uQQuVA`;
+  // const options = {
+  //   method: "GET",
+  //   headers: {
+  //     "x-rapidapi-key": "96e63d6a9dmsh343f9a787999921p182641jsnb26da9452b9e",
+  //     "x-rapidapi-host": "youtube-v31.p.rapidapi.com",
+  //   },
+  // };
+  // const response = await fetch(url, options);
+  // return await response.json();
 
-  // return trendingResponse;
+  return trendingResponse;
 };
 
 // pages
