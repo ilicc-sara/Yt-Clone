@@ -21,7 +21,7 @@ function Videos(props) {
         <Link className="link-article" to={`/video/${video.id.videoId}`}>
           <Article
             key={index}
-            thumbnail={video.snippet.thumbnails.default.url}
+            thumbnail={video.snippet.thumbnails.medium.url}
             title={video.snippet.title}
             chanel={video.snippet.channelTitle}
             time={formatDate(video.snippet.publishedAt)}
@@ -31,10 +31,21 @@ function Videos(props) {
     } else if (video.id.kind === "youtube#channel") {
       return (
         <Link
-          className="link-channel-arcitle"
+          className="link-channel-article"
           to={`/channel/${video.id.channelId}`}
         >
-          {video.snippet.title}
+          {/* {video.snippet.title} */}
+
+          <article className="channel-article" key={index}>
+            <img
+              className="channel-profile-picture"
+              src={video.snippet.thumbnails.medium.url}
+            />
+            <p className="channel-title">{video.snippet.title}</p>
+            <div className="description-cont">
+              <p>{video.snippet.description.slice(0, 120) + "..."}</p>
+            </div>
+          </article>
         </Link>
       );
     }
