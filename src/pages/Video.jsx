@@ -82,51 +82,51 @@ function Video() {
 }
 
 const renderVideo = async (id) => {
-  // const url = `https://youtube-v31.p.rapidapi.com/videos?part=contentDetails,snippet,statistics&id=${id}`;
-  // const options = {
-  //   method: "GET",
-  //   headers: {
-  //     "x-rapidapi-key": "96e63d6a9dmsh343f9a787999921p182641jsnb26da9452b9e",
-  //     "x-rapidapi-host": "youtube-v31.p.rapidapi.com",
-  //   },
-  // };
+  const url = `https://youtube-v31.p.rapidapi.com/videos?part=contentDetails,snippet,statistics&id=${id}`;
+  const options = {
+    method: "GET",
+    headers: {
+      "x-rapidapi-key": "96e63d6a9dmsh343f9a787999921p182641jsnb26da9452b9e",
+      "x-rapidapi-host": "youtube-v31.p.rapidapi.com",
+    },
+  };
 
-  // const response = await fetch(url, options);
-  // return await response.json();
+  const response = await fetch(url, options);
+  return await response.json();
 
-  return videoResponse;
+  // return videoResponse;
 };
 
 const renderComments = async (id) => {
-  // const commentsUrl = `https://youtube-v31.p.rapidapi.com/commentThreads?part=snippet&videoId=${id}&maxResults=100`;
-  // const options = {
-  //   method: "GET",
-  //   headers: {
-  //     "x-rapidapi-key": "96e63d6a9dmsh343f9a787999921p182641jsnb26da9452b9e",
-  //     "x-rapidapi-host": "youtube-v31.p.rapidapi.com",
-  //   },
-  // };
+  const commentsUrl = `https://youtube-v31.p.rapidapi.com/commentThreads?part=snippet&videoId=${id}&maxResults=100`;
+  const options = {
+    method: "GET",
+    headers: {
+      "x-rapidapi-key": "96e63d6a9dmsh343f9a787999921p182641jsnb26da9452b9e",
+      "x-rapidapi-host": "youtube-v31.p.rapidapi.com",
+    },
+  };
 
-  // const response = await fetch(commentsUrl, options);
-  // return await response.json();
+  const response = await fetch(commentsUrl, options);
+  return await response.json();
 
-  return commentsResponse;
+  // return commentsResponse;
 };
 
 const renderSuggested = async (id) => {
-  // const suggestedUrl = `https://youtube-v31.p.rapidapi.com/search?channelId=${id}&part=snippet,id&order=date&maxResults=34`;
-  // const options = {
-  //   method: "GET",
-  //   headers: {
-  //     "x-rapidapi-key": "96e63d6a9dmsh343f9a787999921p182641jsnb26da9452b9e",
-  //     "x-rapidapi-host": "youtube-v31.p.rapidapi.com",
-  //   },
-  // };
+  const suggestedUrl = `https://youtube-v31.p.rapidapi.com/search?channelId=${id}&part=snippet,id&order=date&maxResults=34`;
+  const options = {
+    method: "GET",
+    headers: {
+      "x-rapidapi-key": "96e63d6a9dmsh343f9a787999921p182641jsnb26da9452b9e",
+      "x-rapidapi-host": "youtube-v31.p.rapidapi.com",
+    },
+  };
 
-  // const response = await fetch(suggestedUrl, options);
-  // return await response.json();
+  const response = await fetch(suggestedUrl, options);
+  return await response.json();
 
-  return suggestedResponse;
+  // return suggestedResponse;
 };
 
 export default Video;

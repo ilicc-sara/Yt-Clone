@@ -349,6 +349,10 @@ aside {
   margin: 0 auto;
 }
 
+.channel-img {
+  border-radius: 222px;
+}
+
 .channel-name {
   font-size: 24px;
   padding: 10px 0;
