@@ -1,3 +1,66 @@
+export const channelResponse = {
+  kind: "youtube#channelListResponse",
+  pageInfo: { totalResults: 1, resultsPerPage: 5 },
+  items: [
+    {
+      kind: "youtube#channel",
+      id: "UC5eDiyFKURwCFAhOrA4wq-A",
+      snippet: {
+        title: "TRENDING",
+        description:
+          "Kanal Trending je sve što ste ikada želeli da znate o poznatim ličnostima, zanimljivostima, modi, trendovima i još mnogo toga! Pratite sjajne edukativne sadržaje o srpskoj estradi, pevačima, glumcima i zanimljivim ljudima iz celog sveta.\n\nTrending je uvek originalan i dobro obavesten. Svaki video koji gledate je lično iskustvo, savet stručnjaka ili pažljiv izvor, tako da znate da dobijate informacije u koje možete da verujete.\n\nNOVI KLIPOVI SVAKOG UTORKA, CETVRTKA I SUBOTE.",
+        customUrl: "@trending.rs.",
+        publishedAt: "2019-09-30T21:02:37Z",
+        thumbnails: {
+          default: {
+            url: "https://yt3.ggpht.com/4bHrXBOlA5j0oHt5wAGP4YHlW8IMwgEZeKwsFDxz3FzuLrfHaaa7AnItTLFBif7JOPXU0cdH0A=s88-c-k-c0x00ffffff-no-rj",
+            width: 88,
+            height: 88,
+          },
+          medium: {
+            url: "https://yt3.ggpht.com/4bHrXBOlA5j0oHt5wAGP4YHlW8IMwgEZeKwsFDxz3FzuLrfHaaa7AnItTLFBif7JOPXU0cdH0A=s240-c-k-c0x00ffffff-no-rj",
+            width: 240,
+            height: 240,
+          },
+          high: {
+            url: "https://yt3.ggpht.com/4bHrXBOlA5j0oHt5wAGP4YHlW8IMwgEZeKwsFDxz3FzuLrfHaaa7AnItTLFBif7JOPXU0cdH0A=s800-c-k-c0x00ffffff-no-rj",
+            width: 800,
+            height: 800,
+          },
+        },
+        localized: {
+          title: "TRENDING",
+          description:
+            "Kanal Trending je sve što ste ikada želeli da znate o poznatim ličnostima, zanimljivostima, modi, trendovima i još mnogo toga! Pratite sjajne edukativne sadržaje o srpskoj estradi, pevačima, glumcima i zanimljivim ljudima iz celog sveta.\n\nTrending je uvek originalan i dobro obavesten. Svaki video koji gledate je lično iskustvo, savet stručnjaka ili pažljiv izvor, tako da znate da dobijate informacije u koje možete da verujete.\n\nNOVI KLIPOVI SVAKOG UTORKA, CETVRTKA I SUBOTE.",
+        },
+        country: "RS",
+      },
+      contentDetails: {
+        relatedPlaylists: { likes: "", uploads: "UU5eDiyFKURwCFAhOrA4wq-A" },
+      },
+      statistics: {
+        viewCount: "121310819",
+        subscriberCount: "187000",
+        hiddenSubscriberCount: false,
+        videoCount: "2027",
+      },
+      brandingSettings: {
+        channel: {
+          title: "TRENDING",
+          description:
+            "Kanal Trending je sve što ste ikada želeli da znate o poznatim ličnostima, zanimljivostima, modi, trendovima i još mnogo toga! Pratite sjajne edukativne sadržaje o srpskoj estradi, pevačima, glumcima i zanimljivim ljudima iz celog sveta.\n\nTrending je uvek originalan i dobro obavesten. Svaki video koji gledate je lično iskustvo, savet stručnjaka ili pažljiv izvor, tako da znate da dobijate informacije u koje možete da verujete.\n\nNOVI KLIPOVI SVAKOG UTORKA, CETVRTKA I SUBOTE.",
+          unsubscribedTrailer: "vMwOWSjZvPQ",
+          country: "RS",
+        },
+        image: {
+          bannerExternalUrl:
+            "https://yt3.googleusercontent.com/_-1mgFjjH_ziIfFZ1cQ-fPVR518N0m4WZFOvj4bmwKato2hwSJwqm_5psoPGmWlIAUec2l8-",
+        },
+      },
+    },
+  ],
+};
+
 export const trendingResponse = {
   kind: "youtube#searchListResponse",
   nextPageToken: "CBgQAA",

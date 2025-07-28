@@ -9,7 +9,7 @@ function Video() {
   const params = useParams();
 
   const videoQuery = useQuery({
-    queryKey: ["videos", params.videoId],
+    queryKey: ["video", params.videoId],
     queryFn: () => renderVideo(params.videoId),
   });
 

@@ -1,17 +1,6 @@
 import Article from "./Article";
 import ChannelArticle from "./ChannelArticle";
-import { formatDistanceToNow } from "date-fns";
 import { Link } from "react-router-dom";
-
-function formatDate(string) {
-  const index = string.indexOf("T");
-
-  const dateOfUploading = string.slice(0, index).split("-");
-
-  const timeAgo = formatDistanceToNow(dateOfUploading, { addSuffix: true });
-
-  return timeAgo.replace("about ", "");
-}
 
 function Videos(props) {
   const { data } = props;
@@ -25,7 +14,7 @@ function Videos(props) {
             thumbnail={video.snippet.thumbnails.medium.url}
             title={video.snippet.title}
             chanel={video.snippet.channelTitle}
-            time={formatDate(video.snippet.publishedAt)}
+            time={video.snippet.publishedAt}
           />
         </Link>
       );
@@ -35,16 +24,6 @@ function Videos(props) {
           className="link-channel-article"
           to={`/channel/${video.id.channelId}`}
         >
-          {/* <article className="channel-article" key={index}>
-            <img
-              className="channel-profile-picture"
-              src={video.snippet.thumbnails.medium.url}
-            />
-            <p className="channel-title">{video.snippet.title}</p>
-            <div className="description-cont">
-              <p>{video.snippet.description.slice(0, 100) + "..."}</p>
-            </div>
-          </article> */}
           <ChannelArticle
             key={index}
             profilePicture={video.snippet.thumbnails.medium.url}
