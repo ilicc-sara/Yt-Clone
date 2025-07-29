@@ -41,18 +41,18 @@ function Home() {
 }
 
 const renderVideos = async (id) => {
-  // const url = `https://youtube-v31.p.rapidapi.com/search?q=${id}&part=snippet,id&maxResults=24&regionCode=US`;
-  // const options = {
-  //   method: "GET",
-  //   headers: {
-  //     "x-rapidapi-key": "96e63d6a9dmsh343f9a787999921p182641jsnb26da9452b9e",
-  //     "x-rapidapi-host": "youtube-v31.p.rapidapi.com",
-  //   },
-  // };
-  // const response = await fetch(url, options);
-  // return await response.json();
+  const url = `https://youtube-v31.p.rapidapi.com/search?q=${id}&part=snippet,id&maxResults=24&regionCode=US`;
+  const options = {
+    method: "GET",
+    headers: {
+      "x-rapidapi-key": "5430da9b3amsh7f5f8ace412dea8p137c8djsn5d13d562d790",
+      "x-rapidapi-host": "youtube-v31.p.rapidapi.com",
+    },
+  };
+  const response = await fetch(url, options);
+  return await response.json();
 
-  return trendingResponse;
+  // return trendingResponse;
 };
 
 // pages
