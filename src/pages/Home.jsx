@@ -55,24 +55,4 @@ const renderVideos = async (id) => {
   // return trendingResponse;
 };
 
-// pages
-//   home
-//     components
-//       header.jsx
-//       videos.jsx
-//   index.jsx
-// api
-// util
-// components
-//   ui
-//     video.jsx
-//     button.jsx
-//   layout
-//     navigation.jsx
-//     footer.jsx
-
-// napravi hijerarhiju fajlova
-// napravi import alias (# "import button from "#components/ui/button"   ") napravi alias za components i pages
-// napravi shared layout
-
 export default Home;

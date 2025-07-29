@@ -148,3 +148,23 @@ import Home from "./Home";
 import LogRocket from "logrocket";
 /////////////////////////////////////////////////////////////////////
 import { formatDistance, subDays, formatDistanceToNow } from "date-fns";
+
+<!-- // pages
+//   home
+//     components
+//       header.jsx
+//       videos.jsx
+//   index.jsx
+// api
+// util
+// components
+//   ui
+//     video.jsx
+//     button.jsx
+//   layout
+//     navigation.jsx
+//     footer.jsx
+
+// napravi hijerarhiju fajlova
+// napravi import alias (# "import button from "#components/ui/button"   ") napravi alias za components i pages
+// napravi shared layout -->
