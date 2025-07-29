@@ -2,11 +2,8 @@ import { formatDistanceToNow } from "date-fns";
 
 function formatDate(string) {
   const index = string.indexOf("T");
-
   const dateOfUploading = string.slice(0, index).split("-");
-
   const timeAgo = formatDistanceToNow(dateOfUploading, { addSuffix: true });
-
   return timeAgo.replace("about ", "");
 }
 

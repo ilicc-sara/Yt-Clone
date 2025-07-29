@@ -6,7 +6,12 @@ import { videosResponse, trendingResponse } from "@/api/api";
 
 function Home() {
   const { id, setId } = useOutletContext();
-
+  // pokusaj da napravis poseban fajl useGetVideos.js
+  // u tom fajlu treba pomeriti funkciju za dohvacanje videa od 11-14
+  // i render videos funkcije
+  // tako da u ovom fajlu (home) mozes uraditi :
+  // const {data, isLoading....} = useGetVideos();
+  // to se u reactu zove customHook
   const { data, isPending, isLoading, error, isFetching } = useQuery({
     queryKey: ["videos", id],
     queryFn: () => renderVideos(id),
@@ -36,18 +41,18 @@ function Home() {
 }
 
 const renderVideos = async (id) => {
-  const url = `https://youtube-v31.p.rapidapi.com/search?q=${id}&part=snippet,id&maxResults=24&regionCode=US`;
-  const options = {
-    method: "GET",
-    headers: {
-      "x-rapidapi-key": "96e63d6a9dmsh343f9a787999921p182641jsnb26da9452b9e",
-      "x-rapidapi-host": "youtube-v31.p.rapidapi.com",
-    },
-  };
-  const response = await fetch(url, options);
-  return await response.json();
+  // const url = `https://youtube-v31.p.rapidapi.com/search?q=${id}&part=snippet,id&maxResults=24&regionCode=US`;
+  // const options = {
+  //   method: "GET",
+  //   headers: {
+  //     "x-rapidapi-key": "96e63d6a9dmsh343f9a787999921p182641jsnb26da9452b9e",
+  //     "x-rapidapi-host": "youtube-v31.p.rapidapi.com",
+  //   },
+  // };
+  // const response = await fetch(url, options);
+  // return await response.json();
 
-  // return trendingResponse;
+  return trendingResponse;
 };
 
 // pages
