@@ -14,7 +14,7 @@ function Home() {
   // to se u reactu zove customHook
   const { data, isPending, isLoading, error, isFetching } = useQuery({
     queryKey: ["videos", id],
-    queryFn: () => renderVideos(id),
+    queryFn: () => fetchVideos(id),
   });
 
   return (
@@ -38,7 +38,7 @@ function Home() {
   );
 }
 
-const renderVideos = async (id) => {
+const fetchVideos = async (id) => {
   const url = `https://youtube-v31.p.rapidapi.com/search?q=${id}&part=snippet,id&maxResults=24&regionCode=US`;
   const options = {
     method: "GET",

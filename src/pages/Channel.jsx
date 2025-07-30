@@ -9,12 +9,12 @@ function Channel(props) {
 
   const channelQuery = useQuery({
     queryKey: ["channel", params.channelId],
-    queryFn: () => renderChannel(params.channelId),
+    queryFn: () => fetchChannel(params.channelId),
   });
 
   const channelVideosQuery = useQuery({
     queryKey: ["channelVideos", params.channelId],
-    queryFn: () => renderChannelVideos(params.channelId),
+    queryFn: () => fetchChannelVideos(params.channelId),
   });
 
   return (
@@ -45,7 +45,7 @@ function Channel(props) {
   );
 }
 
-const renderChannel = async (id) => {
+const fetchChannel = async (id) => {
   const channelDetailsUrl = `https://youtube-v31.p.rapidapi.com/channels?part=snippet,statistics&id=${id}`;
   const options = {
     method: "GET",
@@ -61,7 +61,7 @@ const renderChannel = async (id) => {
   // return channelResponse;
 };
 
-const renderChannelVideos = async (id) => {
+const fetchChannelVideos = async (id) => {
   const channelVideosUrl = `https://youtube-v31.p.rapidapi.com/search?channelId=${id}&part=snippet,id&order=date&maxResults=34`;
   const options = {
     method: "GET",

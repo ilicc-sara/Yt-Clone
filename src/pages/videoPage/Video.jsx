@@ -10,19 +10,19 @@ function Video() {
   // Promise.all
   const videoQuery = useQuery({
     queryKey: ["video", params.videoId],
-    queryFn: () => renderVideo(params.videoId),
+    queryFn: () => fetchVideo(params.videoId),
   });
 
   const commentsQuery = useQuery({
     queryKey: ["comments", params.videoId],
-    queryFn: () => renderComments(params.videoId),
+    queryFn: () => fetchComments(params.videoId),
   });
 
   const channelId = commentsQuery.data?.items[0].snippet.channelId;
   // const channelId = videoQuery.data?.items.snippet.channelId;
   const suggestedQuery = useQuery({
     queryKey: ["suggested", channelId],
-    queryFn: () => renderSuggested(channelId),
+    queryFn: () => fetchSuggested(channelId),
   });
 
   return (
@@ -81,7 +81,7 @@ function Video() {
   );
 }
 
-const renderVideo = async (id) => {
+const fetchVideo = async (id) => {
   const url = `https://youtube-v31.p.rapidapi.com/videos?part=contentDetails,snippet,statistics&id=${id}`;
   const options = {
     method: "GET",
@@ -97,7 +97,7 @@ const renderVideo = async (id) => {
   // return videoResponse;
 };
 
-const renderComments = async (id) => {
+const fetchComments = async (id) => {
   const commentsUrl = `https://youtube-v31.p.rapidapi.com/commentThreads?part=snippet&videoId=${id}&maxResults=100`;
   const options = {
     method: "GET",
@@ -113,7 +113,7 @@ const renderComments = async (id) => {
   // return commentsResponse;
 };
 
-const renderSuggested = async (id) => {
+const fetchSuggested = async (id) => {
   const suggestedUrl = `https://youtube-v31.p.rapidapi.com/search?channelId=${id}&part=snippet,id&order=date&maxResults=34`;
   const options = {
     method: "GET",
