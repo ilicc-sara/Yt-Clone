@@ -24,7 +24,7 @@ function Home() {
       </aside>
 
       <main className="video-container">
-        {isPending && <h1>Loading...</h1>}
+        {isPending && <div className="loader"></div>}
         {error && <h1>Error</h1>}
         {data && (
           <h1 className="displayed-videos">

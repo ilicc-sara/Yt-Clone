@@ -28,7 +28,7 @@ function Video() {
   return (
     <div className="clicked-video-container">
       <div className="video-and-comments">
-        {videoQuery.isPending && <h1>Loading...</h1>}
+        {videoQuery.isPending && <div className="loader"></div>}
         {videoQuery.error && <h1>Error</h1>}
         {videoQuery.data && (
           <div className="video-display">
@@ -65,14 +65,14 @@ function Video() {
           </div>
         )}
 
-        {commentsQuery.isPending && <h1>Loading...</h1>}
+        {commentsQuery.isPending && <div className="loader"></div>}
         {commentsQuery.error && <h1>Error</h1>}
         <div className="comments-display">
           <Comments data={commentsQuery.data} />
         </div>
       </div>
 
-      {suggestedQuery.isPending && <h1>Loading...</h1>}
+      {suggestedQuery.isPending && <div className="loader"></div>}
       {suggestedQuery.error && <h1>Error</h1>}
       <div className="suggested-display">
         <Videos data={suggestedQuery.data} />
