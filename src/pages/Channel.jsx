@@ -20,7 +20,7 @@ function Channel(props) {
   return (
     <div className="clicked-channel-container">
       {channelQuery.isPending && <div className="loader"></div>}
-      {channelQuery.error && <h1>Error</h1>}
+      {channelQuery.error && <h1>Error...Something went wrong</h1>}
       <img
         className="channel-img"
         src={channelQuery.data?.items[0].snippet.thumbnails.medium.url}
@@ -38,7 +38,7 @@ function Channel(props) {
           <span className="channel-videos-span">videos</span>
         </h1>
         {channelVideosQuery.isPending && <div className="loader"></div>}
-        {channelVideosQuery.error && <h1>Error</h1>}
+        {channelVideosQuery.error && <h1>Error...Something went wrong</h1>}
         <Videos data={channelVideosQuery.data} />
       </div>
     </div>
