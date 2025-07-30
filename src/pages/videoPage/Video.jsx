@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import YouTube from "react-youtube";
 import Videos from "@/components/Videos";
-import Comments from "@/components/Comments";
+import Comments from "@/pages/videoPage/videoComponents/Comments";
 import { videoResponse, commentsResponse, suggestedResponse } from "@/api/api";
 
 function Video() {
