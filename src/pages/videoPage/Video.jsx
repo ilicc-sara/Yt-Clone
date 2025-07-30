@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import YouTube from "react-youtube";
-import Videos from "@/components/Videos";
+import Videos from "@/reusableComponents/Videos";
 import Comments from "@/pages/videoPage/videoComponents/Comments";
 import { videoResponse, commentsResponse, suggestedResponse } from "@/api/api";
 
@@ -86,7 +86,7 @@ const renderVideo = async (id) => {
   const options = {
     method: "GET",
     headers: {
-      "x-rapidapi-key": "5430da9b3amsh7f5f8ace412dea8p137c8djsn5d13d562d790",
+      "x-rapidapi-key": "2f21917738msha04edb7a701a4e8p148aafjsna4f42a08d4a0",
       "x-rapidapi-host": "youtube-v31.p.rapidapi.com",
     },
   };
@@ -102,7 +102,7 @@ const renderComments = async (id) => {
   const options = {
     method: "GET",
     headers: {
-      "x-rapidapi-key": "5430da9b3amsh7f5f8ace412dea8p137c8djsn5d13d562d790",
+      "x-rapidapi-key": "2f21917738msha04edb7a701a4e8p148aafjsna4f42a08d4a0",
       "x-rapidapi-host": "youtube-v31.p.rapidapi.com",
     },
   };
@@ -118,7 +118,7 @@ const renderSuggested = async (id) => {
   const options = {
     method: "GET",
     headers: {
-      "x-rapidapi-key": "5430da9b3amsh7f5f8ace412dea8p137c8djsn5d13d562d790",
+      "x-rapidapi-key": "2f21917738msha04edb7a701a4e8p148aafjsna4f42a08d4a0",
       "x-rapidapi-host": "youtube-v31.p.rapidapi.com",
     },
   };
