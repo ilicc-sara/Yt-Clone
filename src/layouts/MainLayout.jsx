@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
-import App from "@/pages/App";
+import App from "@/App";
 import { categories } from "@/assets/data";
 
 function MainLayout() {

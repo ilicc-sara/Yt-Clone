@@ -1,5 +1,5 @@
 import Videos from "@/components/Videos";
-import CategoryButtons from "@/components/CategoryButtons";
+import CategoryButtons from "@/pages/home/components/CategoryButtons";
 import { useQuery } from "@tanstack/react-query";
 import { useOutletContext } from "react-router-dom";
 import { videosResponse, trendingResponse } from "@/api/api";
@@ -16,8 +16,6 @@ function Home() {
     queryKey: ["videos", id],
     queryFn: () => renderVideos(id),
   });
-
-  console.log(data);
 
   return (
     <section>
