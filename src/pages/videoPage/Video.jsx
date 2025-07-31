@@ -17,16 +17,15 @@ function Video() {
   //   queryKey: ["comments", params.videoId],
   //   queryFn: () => fetchComments(params.videoId),
   // });
-  const videoAndCommentsQuery = useQuery({
+  const { data, isPending, error } = useQuery({
     queryKey: ["multipleData", params.videoId],
     queryFn: () => fetchMultipleData(params.videoId),
   });
 
-  console.log(videoAndCommentsQuery.data?.data1);
-  console.log(videoAndCommentsQuery.data?.data2);
+  console.log(data?.data1);
+  console.log(data?.data2);
 
-  const channelId =
-    videoAndCommentsQuery.data?.data2.items[0].snippet.channelId;
+  const channelId = data?.data2.items[0].snippet.channelId;
   // const channelId = commentsQuery.data?.items[0].snippet.channelId;
   // const channelId = videoQuery.data?.items.snippet.channelId;
   const suggestedQuery = useQuery({
@@ -37,25 +36,21 @@ function Video() {
   return (
     <div className="clicked-video-container">
       <div className="video-and-comments">
-        {videoAndCommentsQuery.isPending && <div className="loader"></div>}
-        {videoAndCommentsQuery.error && <h1>Error...Something went wrong</h1>}
-        {videoAndCommentsQuery.data?.data1 && (
+        {isPending && <div className="loader"></div>}
+        {error && <h1>Error...Something went wrong</h1>}
+        {data?.data1 && (
           <div className="video-display">
             <YouTube
               videoId={params.videoId}
               opts={{ height: "600px", width: "1000px" }}
             />
 
-            <h1>
-              {" "}
-              {videoAndCommentsQuery.data?.data1.items[0].snippet.title}{" "}
-            </h1>
+            <h1> {data?.data1.items[0].snippet.title} </h1>
 
             <div className="video-display-info">
               <p className="views">
                 {Number(
-                  videoAndCommentsQuery.data?.data1.items[0].statistics
-                    .viewCount
+                  data?.data1.items[0].statistics.viewCount
                 ).toLocaleString("en-US")}
                 &nbsp;views
               </p>
@@ -63,8 +58,7 @@ function Video() {
               <p>
                 <ion-icon name="thumbs-up-outline"></ion-icon>
                 {Number(
-                  videoAndCommentsQuery.data?.data1.items[0].statistics
-                    .likeCount
+                  data?.data1.items[0].statistics.likeCount
                 ).toLocaleString("en-US")}
               </p>
               <ion-icon name="thumbs-down-outline"></ion-icon>
@@ -80,7 +74,7 @@ function Video() {
         )}
 
         <div className="comments-display">
-          <Comments data={videoAndCommentsQuery.data.data2} />
+          <Comments data={data.data2} />
         </div>
       </div>
 
