@@ -5,6 +5,7 @@ import Videos from "@/reusableComponents/Videos";
 import Comments from "@/pages/videoPage/videoComponents/Comments";
 import { videoResponse, commentsResponse, suggestedResponse } from "@/api/api";
 import useGetData from "./useGetData";
+import useGetSuggested from "./useGetSuggested";
 
 function Video() {
   const params = useParams();
@@ -12,12 +13,7 @@ function Video() {
   const { data, isPending, error } = useGetData(params.videoId);
 
   const channelId = data?.data2.items[0].snippet.channelId;
-
-  const suggestedQuery = useQuery({
-    queryKey: ["suggested", channelId],
-    queryFn: () => fetchSuggested(channelId),
-    // enabled: !channelId,
-  });
+  const { suggestedQuery } = useGetSuggested(channelId);
 
   return (
     <div className="clicked-video-container">
@@ -72,21 +68,5 @@ function Video() {
     </div>
   );
 }
-
-const fetchSuggested = async (id) => {
-  const suggestedUrl = `https://youtube-v31.p.rapidapi.com/search?channelId=${id}&part=snippet,id&order=date&maxResults=34`;
-  const options = {
-    method: "GET",
-    headers: {
-      "x-rapidapi-key": "c9e2d65fe7mshca8fe4008c92235p15a31cjsn0bd9306283b0",
-      "x-rapidapi-host": "youtube-v31.p.rapidapi.com",
-    },
-  };
-
-  const response = await fetch(suggestedUrl, options);
-  return await response.json();
-
-  // return suggestedResponse;
-};
 
 export default Video;
