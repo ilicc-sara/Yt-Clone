@@ -4,7 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import Videos from "../reusableComponents/Videos";
 import { channelResponse, channelVideosResponse } from "@/api/api";
 
-function Channel(props) {
+function Channel() {
   const params = useParams();
 
   const channelQuery = useQuery({
@@ -50,7 +50,7 @@ const fetchChannel = async (id) => {
   const options = {
     method: "GET",
     headers: {
-      "x-rapidapi-key": "6e1e214538msha84c2422b643eebp154501jsn37bc9081d310",
+      "x-rapidapi-key": "c9e2d65fe7mshca8fe4008c92235p15a31cjsn0bd9306283b0",
       "x-rapidapi-host": "youtube-v31.p.rapidapi.com",
     },
   };

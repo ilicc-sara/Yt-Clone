@@ -4,17 +4,12 @@ import YouTube from "react-youtube";
 import Videos from "@/reusableComponents/Videos";
 import Comments from "@/pages/videoPage/videoComponents/Comments";
 import { videoResponse, commentsResponse, suggestedResponse } from "@/api/api";
+import useGetData from "./useGetData";
 
 function Video() {
   const params = useParams();
 
-  const { data, isPending, error } = useQuery({
-    queryKey: ["multipleData", params.videoId],
-    queryFn: () => fetchMultipleData(params.videoId),
-  });
-
-  console.log(data?.data1);
-  console.log(data?.data2);
+  const { data, isPending, error } = useGetData(params.videoId);
 
   const channelId = data?.data2.items[0].snippet.channelId;
 
@@ -77,24 +72,6 @@ function Video() {
     </div>
   );
 }
-
-const fetchMultipleData = async (id) => {
-  const url = `https://youtube-v31.p.rapidapi.com/videos?part=contentDetails,snippet,statistics&id=${id}`;
-  const options = {
-    method: "GET",
-    headers: {
-      "x-rapidapi-key": "c9e2d65fe7mshca8fe4008c92235p15a31cjsn0bd9306283b0",
-      "x-rapidapi-host": "youtube-v31.p.rapidapi.com",
-    },
-  };
-  const commentsUrl = `https://youtube-v31.p.rapidapi.com/commentThreads?part=snippet&videoId=${id}&maxResults=100`;
-
-  const [data1, data2] = await Promise.all([
-    fetch(url, options).then((res) => res.json()),
-    fetch(commentsUrl, options).then((res) => res.json()),
-  ]);
-  return { data1, data2 };
-};
 
 const fetchSuggested = async (id) => {
   const suggestedUrl = `https://youtube-v31.p.rapidapi.com/search?channelId=${id}&part=snippet,id&order=date&maxResults=34`;
