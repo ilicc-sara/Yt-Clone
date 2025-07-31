@@ -2,7 +2,7 @@ import Videos from "@/reusableComponents/Videos";
 import CategoryButtons from "@/pages/home/components/CategoryButtons";
 import { useQuery } from "@tanstack/react-query";
 import { useOutletContext } from "react-router-dom";
-import { videosResponse, trendingResponse } from "@/api/api";
+
 import useGetVideos from "./useGetVideos";
 
 function Home() {
