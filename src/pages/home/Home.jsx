@@ -3,6 +3,7 @@ import CategoryButtons from "@/pages/home/components/CategoryButtons";
 import { useQuery } from "@tanstack/react-query";
 import { useOutletContext } from "react-router-dom";
 import { videosResponse, trendingResponse } from "@/api/api";
+import useGetVideos from "./useGetVideos";
 
 function Home() {
   const { id, setId } = useOutletContext();
@@ -12,10 +13,8 @@ function Home() {
   // tako da u ovom fajlu (home) mozes uraditi :
   // const {data, isLoading....} = useGetVideos();
   // to se u reactu zove customHook
-  const { data, isPending, isLoading, error, isFetching } = useQuery({
-    queryKey: ["videos", id],
-    queryFn: () => fetchVideos(id),
-  });
+
+  const { data, isPending, error } = useGetVideos(id);
 
   return (
     <section>
@@ -37,20 +36,5 @@ function Home() {
     </section>
   );
 }
-
-const fetchVideos = async (id) => {
-  const url = `https://youtube-v31.p.rapidapi.com/search?q=${id}&part=snippet,id&maxResults=24&regionCode=US`;
-  const options = {
-    method: "GET",
-    headers: {
-      "x-rapidapi-key": "2f21917738msha04edb7a701a4e8p148aafjsna4f42a08d4a0",
-      "x-rapidapi-host": "youtube-v31.p.rapidapi.com",
-    },
-  };
-  const response = await fetch(url, options);
-  return await response.json();
-
-  // return trendingResponse;
-};
 
 export default Home;

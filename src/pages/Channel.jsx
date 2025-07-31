@@ -50,7 +50,7 @@ const fetchChannel = async (id) => {
   const options = {
     method: "GET",
     headers: {
-      "x-rapidapi-key": "2f21917738msha04edb7a701a4e8p148aafjsna4f42a08d4a0",
+      "x-rapidapi-key": "6e1e214538msha84c2422b643eebp154501jsn37bc9081d310",
       "x-rapidapi-host": "youtube-v31.p.rapidapi.com",
     },
   };
@@ -66,7 +66,7 @@ const fetchChannelVideos = async (id) => {
   const options = {
     method: "GET",
     headers: {
-      "x-rapidapi-key": "2f21917738msha04edb7a701a4e8p148aafjsna4f42a08d4a0",
+      "x-rapidapi-key": "6e1e214538msha84c2422b643eebp154501jsn37bc9081d310",
       "x-rapidapi-host": "youtube-v31.p.rapidapi.com",
     },
   };
