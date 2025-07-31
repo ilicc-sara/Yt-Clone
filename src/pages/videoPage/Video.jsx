@@ -8,17 +8,26 @@ import { videoResponse, commentsResponse, suggestedResponse } from "@/api/api";
 function Video() {
   const params = useParams();
   // Promise.all
-  const videoQuery = useQuery({
-    queryKey: ["video", params.videoId],
-    queryFn: () => fetchVideo(params.videoId),
+  // const videoQuery = useQuery({
+  //   queryKey: ["video", params.videoId],
+  //   queryFn: () => fetchVideo(params.videoId),
+  // });
+
+  // const commentsQuery = useQuery({
+  //   queryKey: ["comments", params.videoId],
+  //   queryFn: () => fetchComments(params.videoId),
+  // });
+  const videoAndCommentsQuery = useQuery({
+    queryKey: ["multipleData", params.videoId],
+    queryFn: () => fetchMultipleData(params.videoId),
   });
 
-  const commentsQuery = useQuery({
-    queryKey: ["comments", params.videoId],
-    queryFn: () => fetchComments(params.videoId),
-  });
+  console.log(videoAndCommentsQuery.data?.data1);
+  console.log(videoAndCommentsQuery.data?.data2);
 
-  const channelId = commentsQuery.data?.items[0].snippet.channelId;
+  const channelId =
+    videoAndCommentsQuery.data?.data2.items[0].snippet.channelId;
+  // const channelId = commentsQuery.data?.items[0].snippet.channelId;
   // const channelId = videoQuery.data?.items.snippet.channelId;
   const suggestedQuery = useQuery({
     queryKey: ["suggested", channelId],
@@ -28,21 +37,25 @@ function Video() {
   return (
     <div className="clicked-video-container">
       <div className="video-and-comments">
-        {videoQuery.isPending && <div className="loader"></div>}
-        {videoQuery.error && <h1>Error...Something went wrong</h1>}
-        {videoQuery.data && (
+        {videoAndCommentsQuery.isPending && <div className="loader"></div>}
+        {videoAndCommentsQuery.error && <h1>Error...Something went wrong</h1>}
+        {videoAndCommentsQuery.data?.data1 && (
           <div className="video-display">
             <YouTube
               videoId={params.videoId}
               opts={{ height: "600px", width: "1000px" }}
             />
 
-            <h1> {videoQuery.data.items[0].snippet.title} </h1>
+            <h1>
+              {" "}
+              {videoAndCommentsQuery.data?.data1.items[0].snippet.title}{" "}
+            </h1>
 
             <div className="video-display-info">
               <p className="views">
                 {Number(
-                  videoQuery.data.items[0].statistics.viewCount
+                  videoAndCommentsQuery.data?.data1.items[0].statistics
+                    .viewCount
                 ).toLocaleString("en-US")}
                 &nbsp;views
               </p>
@@ -50,7 +63,8 @@ function Video() {
               <p>
                 <ion-icon name="thumbs-up-outline"></ion-icon>
                 {Number(
-                  videoQuery.data.items[0].statistics.likeCount
+                  videoAndCommentsQuery.data?.data1.items[0].statistics
+                    .likeCount
                 ).toLocaleString("en-US")}
               </p>
               <ion-icon name="thumbs-down-outline"></ion-icon>
@@ -65,10 +79,8 @@ function Video() {
           </div>
         )}
 
-        {commentsQuery.isPending && <div className="loader"></div>}
-        {commentsQuery.error && <h1>Error...Something went wrong</h1>}
         <div className="comments-display">
-          <Comments data={commentsQuery.data} />
+          <Comments data={videoAndCommentsQuery.data.data2} />
         </div>
       </div>
 
@@ -80,26 +92,33 @@ function Video() {
     </div>
   );
 }
+///////////////////////////
+// async function fetchMultipleData() {
+//   const [data1, data2] = await Promise.all([
+//     fetch("/api/endpoint1").then((res) => res.json()),
+//     fetch("/api/endpoint2").then((res) => res.json()),
+//   ]);
+//   return { data1, data2 };
+// }
 
-const fetchVideo = async (id) => {
+// function MyComponent() {
+//   const { data, isLoading, error } = useQuery({
+//     queryKey: ["multipleData"],
+//     queryFn: fetchMultipleData,
+//   });
+// }
+//////////////////////////////////////////////////
+const fetchMultipleData = async (id) => {
   const url = `https://youtube-v31.p.rapidapi.com/videos?part=contentDetails,snippet,statistics&id=${id}`;
-  const options = {
+  const optionsVideo = {
     method: "GET",
     headers: {
       "x-rapidapi-key": "6e1e214538msha84c2422b643eebp154501jsn37bc9081d310",
       "x-rapidapi-host": "youtube-v31.p.rapidapi.com",
     },
   };
-
-  const response = await fetch(url, options);
-  return await response.json();
-
-  // return videoResponse;
-};
-
-const fetchComments = async (id) => {
   const commentsUrl = `https://youtube-v31.p.rapidapi.com/commentThreads?part=snippet&videoId=${id}&maxResults=100`;
-  const options = {
+  const optionsComments = {
     method: "GET",
     headers: {
       "x-rapidapi-key": "6e1e214538msha84c2422b643eebp154501jsn37bc9081d310",
@@ -107,11 +126,44 @@ const fetchComments = async (id) => {
     },
   };
 
-  const response = await fetch(commentsUrl, options);
-  return await response.json();
-
-  // return commentsResponse;
+  const [data1, data2] = await Promise.all([
+    fetch(url, optionsVideo).then((res) => res.json()),
+    fetch(commentsUrl, optionsComments).then((res) => res.json()),
+  ]);
+  return { data1, data2 };
 };
+
+// const fetchVideo = async (id) => {
+//   const url = `https://youtube-v31.p.rapidapi.com/videos?part=contentDetails,snippet,statistics&id=${id}`;
+//   const options = {
+//     method: "GET",
+//     headers: {
+//       "x-rapidapi-key": "6e1e214538msha84c2422b643eebp154501jsn37bc9081d310",
+//       "x-rapidapi-host": "youtube-v31.p.rapidapi.com",
+//     },
+//   };
+
+//   const response = await fetch(url, options);
+//   return await response.json();
+
+//   // return videoResponse;
+// };
+
+// const fetchComments = async (id) => {
+//   const commentsUrl = `https://youtube-v31.p.rapidapi.com/commentThreads?part=snippet&videoId=${id}&maxResults=100`;
+//   const options = {
+//     method: "GET",
+//     headers: {
+//       "x-rapidapi-key": "6e1e214538msha84c2422b643eebp154501jsn37bc9081d310",
+//       "x-rapidapi-host": "youtube-v31.p.rapidapi.com",
+//     },
+//   };
+
+//   const response = await fetch(commentsUrl, options);
+//   return await response.json();
+
+//   // return commentsResponse;
+// };
 
 const fetchSuggested = async (id) => {
   const suggestedUrl = `https://youtube-v31.p.rapidapi.com/search?channelId=${id}&part=snippet,id&order=date&maxResults=34`;
