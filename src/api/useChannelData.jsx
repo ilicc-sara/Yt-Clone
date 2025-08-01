@@ -17,7 +17,7 @@ function useChannelData(id) {
     const options = {
       method: "GET",
       headers: {
-        "x-rapidapi-key": "c9e2d65fe7mshca8fe4008c92235p15a31cjsn0bd9306283b0",
+        "x-rapidapi-key": "ca15920c56mshf9c581b5644b811p131238jsnb4402ca00e5c",
         "x-rapidapi-host": "youtube-v31.p.rapidapi.com",
       },
     };
@@ -33,7 +33,7 @@ function useChannelData(id) {
     const options = {
       method: "GET",
       headers: {
-        "x-rapidapi-key": "cf858ffe84msh7f4d793b57b3f6dp179b64jsn328088b8705e",
+        "x-rapidapi-key": "ca15920c56mshf9c581b5644b811p131238jsnb4402ca00e5c",
         "x-rapidapi-host": "youtube-v31.p.rapidapi.com",
       },
     };

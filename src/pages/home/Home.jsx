@@ -2,8 +2,7 @@ import Videos from "@/reusableComponents/Videos";
 import CategoryButtons from "@/pages/home/components/CategoryButtons";
 import { useQuery } from "@tanstack/react-query";
 import { useOutletContext } from "react-router-dom";
-
-import useGetVideos from "./useGetVideos";
+import useGetVideos from "@/api/useGetVideos";
 
 function Home() {
   const { id, setId } = useOutletContext();

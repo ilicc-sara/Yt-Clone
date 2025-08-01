@@ -4,8 +4,8 @@ import YouTube from "react-youtube";
 import Videos from "@/reusableComponents/Videos";
 import Comments from "@/pages/videoPage/videoComponents/Comments";
 import { videoResponse, commentsResponse, suggestedResponse } from "@/api/api";
-import useGetData from "./useGetData";
-import useGetSuggested from "./useGetSuggested";
+import useGetData from "@/api/useGetData";
+import useGetSuggested from "@/api/useGetSuggested";
 
 function Video() {
   const params = useParams();

@@ -12,7 +12,7 @@ function useGetSuggested(id) {
     const options = {
       method: "GET",
       headers: {
-        "x-rapidapi-key": "cf858ffe84msh7f4d793b57b3f6dp179b64jsn328088b8705e",
+        "x-rapidapi-key": "ca15920c56mshf9c581b5644b811p131238jsnb4402ca00e5c",
         "x-rapidapi-host": "youtube-v31.p.rapidapi.com",
       },
     };
