@@ -1,17 +1,10 @@
 import Videos from "@/reusableComponents/Videos";
 import CategoryButtons from "@/pages/home/components/CategoryButtons";
-import { useQuery } from "@tanstack/react-query";
 import { useOutletContext } from "react-router-dom";
 import useGetVideos from "@/api/useGetVideos";
 
 function Home() {
   const { id, setId } = useOutletContext();
-  // pokusaj da napravis poseban fajl useGetVideos.js
-  // u tom fajlu treba pomeriti funkciju za dohvacanje videa od 11-14
-  // i render videos funkcije
-  // tako da u ovom fajlu (home) mozes uraditi :
-  // const {data, isLoading....} = useGetVideos();
-  // to se u reactu zove customHook
 
   const { data, isPending, error } = useGetVideos(id);
 

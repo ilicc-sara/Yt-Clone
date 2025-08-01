@@ -1,6 +1,4 @@
-import React from "react";
 import { useParams } from "react-router-dom";
-import { useQuery } from "@tanstack/react-query";
 import Videos from "../reusableComponents/Videos";
 import { channelResponse, channelVideosResponse } from "@/api/api";
 import useChannelData from "@/api/useChannelData";

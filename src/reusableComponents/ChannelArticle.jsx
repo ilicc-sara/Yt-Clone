@@ -1,5 +1,3 @@
-import React from "react";
-
 function ChannelArticle(props) {
   const { profilePicture, title, description } = props;
   return (
