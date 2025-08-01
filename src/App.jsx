@@ -15,30 +15,28 @@ function App(props) {
   }
 
   return (
-    <>
-      <nav>
-        <Link className="home-link" to="/">
-          <div className="yt-logo">
-            <img className="logo" src="./youtubeLogo.png" />
-            <h1 className="youtube" href="#">
-              YouTube
-            </h1>
-          </div>
-        </Link>
+    <nav>
+      <Link className="home-link" to="/">
+        <div className="yt-logo">
+          <img className="logo" src="./youtubeLogo.png" />
+          <h1 className="youtube" href="#">
+            YouTube
+          </h1>
+        </div>
+      </Link>
 
-        <form onSubmit={submitForm} className="search-form">
-          <input
-            className="search-input"
-            type="text"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            placeholder="Search..."
-          />
+      <form onSubmit={submitForm} className="search-form">
+        <input
+          className="search-input"
+          type="text"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          placeholder="Search..."
+        />
 
-          <button className="btn-input">🔎</button>
-        </form>
-      </nav>
-    </>
+        <button className="btn-input">🔎</button>
+      </form>
+    </nav>
   );
 }
 
