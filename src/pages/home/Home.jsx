@@ -1,4 +1,4 @@
-import Videos from "@/reusableComponents/Videos";
+import Videos from "@/UI/Videos";
 import CategoryButtons from "@/pages/home/components/CategoryButtons";
 import { useOutletContext } from "react-router-dom";
 import useGetVideos from "@/api/useGetVideos";

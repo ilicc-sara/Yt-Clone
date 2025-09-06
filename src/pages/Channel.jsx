@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import Videos from "../reusableComponents/Videos";
+import Videos from "../UI/Videos";
 import { channelResponse, channelVideosResponse } from "@/api/api";
 import useChannelData from "@/api/useChannelData";
 

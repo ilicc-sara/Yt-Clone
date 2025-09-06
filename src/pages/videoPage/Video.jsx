@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import YouTube from "react-youtube";
-import Videos from "@/reusableComponents/Videos";
+import Videos from "@/UI/Videos";
 import Comments from "@/pages/videoPage/videoComponents/Comments";
 import { videoResponse, commentsResponse, suggestedResponse } from "@/api/api";
 import useGetData from "@/api/useGetData";
