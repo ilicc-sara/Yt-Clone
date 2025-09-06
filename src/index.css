@@ -27,6 +27,12 @@ nav {
   margin-bottom: 30px;
 }
 
+@media (max-width: 1200px) {
+  nav {
+    background-color: darkolivegreen;
+  }
+}
+
 .home-link {
   text-decoration: none;
   color: white;
