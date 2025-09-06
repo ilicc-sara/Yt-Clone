@@ -1,0 +1,14 @@
+@media (max-width: 1450px) {
+  .video-article {
+    width: 240px;
+  }
+}
+
+@media (max-width: 1350px) {
+  /* .video-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  } */
+  .video-article {
+    width: 220px;
+  }
+}

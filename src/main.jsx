@@ -1,6 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "./index.css";
+import "./css/index.css";
+import "./css/queries.css";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
 import MainLayout from "@/layouts/MainLayout.jsx";
 import Video from "./pages/videoPage/Video.jsx";

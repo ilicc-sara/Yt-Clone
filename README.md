@@ -168,3 +168,9 @@ import { formatDistance, subDays, formatDistanceToNow } from "date-fns";
 // napravi hijerarhiju fajlova
 // napravi import alias (# "import button from "#components/ui/button"   ") napravi alias za components i pages
 // napravi shared layout -->
+
+@media (max-width: 1200px) {
+nav {
+background-color: darkolivegreen;
+}
+}
