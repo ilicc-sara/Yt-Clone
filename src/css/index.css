@@ -33,16 +33,6 @@ nav {
   }
 } */
 
-.menu-icon {
-  position: absolute;
-  height: 24px;
-  width: 24px;
-  left: -30px;
-  top: 50%;
-  transform: translateY(-50%);
-  visibility: hidden;
-}
-
 .home-link {
   text-decoration: none;
   color: white;
@@ -79,6 +69,14 @@ nav {
   justify-content: center;
   gap: 5px;
   position: relative;
+}
+
+.menu-icon {
+  height: 28px;
+  width: 28px;
+
+  display: none;
+  margin-left: 15px;
 }
 
 .youtube {
@@ -210,7 +208,8 @@ aside {
   background-color: rgba(255, 255, 255, 0.1);
   padding-bottom: 1rem;
   /* border: 0.5px solid white; */
-  box-shadow: 0 0 10px rgb(255, 255, 255, 0.1);
+  /* box-shadow: 0 0 10px rgb(255, 255, 255, 0.1); */
+  box-shadow: 0 0 10px rgb(0, 0, 0, 0.3);
   min-height: 32rem;
   border-radius: 10px;
   overflow: hidden;
