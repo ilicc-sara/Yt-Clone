@@ -25,7 +25,6 @@ nav {
   justify-content: space-between;
   padding: 0 5%;
   margin-bottom: 30px;
-  position: relative;
 }
 
 /* @media (max-width: 1200px) {
@@ -38,7 +37,9 @@ nav {
   position: absolute;
   height: 24px;
   width: 24px;
-  left: 20px;
+  left: -30px;
+  top: 50%;
+  transform: translateY(-50%);
   visibility: hidden;
 }
 
@@ -77,6 +78,7 @@ nav {
   align-items: center;
   justify-content: center;
   gap: 5px;
+  position: relative;
 }
 
 .youtube {
@@ -205,14 +207,19 @@ aside {
   width: 26rem;
   text-align: left;
   gap: 1rem;
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.1);
   padding-bottom: 1rem;
-  border: 0.5px solid white;
+  /* border: 0.5px solid white; */
+  box-shadow: 0 0 10px rgb(255, 255, 255, 0.1);
   min-height: 32rem;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .thumbnail {
   width: 100%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   /* height: 220px; */
 }
 
