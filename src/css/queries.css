@@ -1,14 +1,17 @@
-@media (max-width: 1450px) {
-  .video-article {
+@media (max-width: 90em) {
+  /* .video-article {
     width: 240px;
+  } */
+  html {
+    font-size: 56.25%;
   }
 }
 
-@media (max-width: 1350px) {
+@media (max-width: 1370px) {
   /* .video-container {
     grid-template-columns: 1fr 1fr 1fr;
   } */
   .video-article {
-    width: 220px;
+    width: 23rem;
   }
 }

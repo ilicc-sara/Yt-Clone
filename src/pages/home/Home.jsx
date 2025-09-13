@@ -10,7 +10,7 @@ function Home() {
 
   return (
     <section>
-      <aside>
+      <aside className="categories-cont">
         <CategoryButtons id={id} setId={setId} />
       </aside>
 
