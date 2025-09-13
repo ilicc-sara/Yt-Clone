@@ -7,11 +7,29 @@
   }
 }
 
-@media (max-width: 1370px) {
+@media (max-width: 86em) {
   /* .video-container {
     grid-template-columns: 1fr 1fr 1fr;
   } */
   .video-article {
-    width: 23rem;
+    width: 23em;
+  }
+
+  .channel-article {
+    width: 23em;
+  }
+}
+
+@media (max-width: 74em) {
+  .video-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .video-article {
+    width: 26em;
+  }
+
+  .channel-article {
+    width: 26em;
   }
 }
