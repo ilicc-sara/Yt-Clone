@@ -35,4 +35,11 @@
 }
 
 @media (max-width: 63em) {
+  .menu-icon {
+    visibility: visible;
+  }
+
+  .categories-cont {
+    display: none;
+  }
 }
