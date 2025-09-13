@@ -25,6 +25,7 @@ nav {
   justify-content: space-between;
   padding: 0 5%;
   margin-bottom: 30px;
+  position: relative;
 }
 
 /* @media (max-width: 1200px) {
@@ -32,6 +33,14 @@ nav {
     background-color: darkolivegreen;
   }
 } */
+
+.menu-icon {
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  left: 20px;
+  visibility: hidden;
+}
 
 .home-link {
   text-decoration: none;

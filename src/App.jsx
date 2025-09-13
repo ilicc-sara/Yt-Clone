@@ -16,6 +16,8 @@ function App(props) {
 
   return (
     <nav>
+      <ion-icon name="menu" className="menu-icon"></ion-icon>
+
       <Link className="home-link" to="/">
         <div className="yt-logo">
           <img className="logo" src="./youtubeLogo.png" />
