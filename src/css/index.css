@@ -305,19 +305,25 @@ aside {
 .clicked-video-container {
   max-width: 130rem;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 4fr 1fr;
+  /* display: grid;
+  grid-template-columns: 4fr 1fr; */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.video-and-comments {
+  width: 100rem;
 }
 
 .video-display {
-  width: 100rem;
+  width: 100%;
   text-align: left;
 }
 
 .video-wrapper {
   position: relative;
   width: 100%;
-  max-width: 100rem; /* optional, controls max size */
+
   margin: 0 auto;
   padding-bottom: 56.25%; /* 16:9 aspect ratio */
   height: 0;
@@ -357,7 +363,7 @@ aside {
 
 .comments-display {
   padding: 20px 0;
-  width: 1000px;
+  width: 100%;
   /* width: 100%; */
   display: flex;
   flex-direction: column;
@@ -406,6 +412,7 @@ aside {
 
 .suggested-display {
   display: flex;
+
   flex-direction: column;
   gap: 20px;
 }

@@ -18,6 +18,14 @@
   .channel-article {
     width: 23em;
   }
+
+  .clicked-video-container {
+    max-width: 120em;
+  }
+
+  .video-and-comments {
+    width: 90em;
+  }
 }
 
 @media (max-width: 74em) {
