@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Videos from "@/UI/Videos";
 import CategoryButtons from "@/pages/home/components/CategoryButtons";
 import { useOutletContext } from "react-router-dom";
@@ -10,6 +10,25 @@ function Home() {
   const { data, isPending, error } = useGetVideos(id);
 
   const [showMobileNav, setShowMobileNav] = useState(false);
+
+  const [width, setWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (width >= 1008) {
+      setShowMobileNav(false);
+    }
+  }, [width]);
+
+  function handleResize() {
+    setWidth(window.innerWidth);
+  }
 
   return (
     <section>
