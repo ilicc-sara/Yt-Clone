@@ -40,6 +40,14 @@
   .channel-article {
     width: 26em;
   }
+
+  .clicked-video-container {
+    max-width: 105em;
+  }
+
+  .video-and-comments {
+    width: 78em;
+  }
 }
 
 @media (max-width: 63em) {
@@ -49,6 +57,22 @@
 
   .categories-cont {
     display: none;
+  }
+
+  .clicked-video-container {
+    max-width: 100em;
+  }
+
+  .video-and-comments {
+    width: 100%;
+  }
+
+  .suggested-display {
+    display: none;
+  }
+
+  html {
+    font-size: 50%;
   }
 }
 
