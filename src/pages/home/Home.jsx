@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Videos from "@/UI/Videos";
 import CategoryButtons from "@/pages/home/components/CategoryButtons";
 import { useOutletContext } from "react-router-dom";
@@ -8,9 +9,15 @@ function Home() {
 
   const { data, isPending, error } = useGetVideos(id);
 
+  const [showMobileNav, setShowMobileNav] = useState(false);
+
   return (
     <section>
-      <ion-icon name="menu" className="menu-icon"></ion-icon>
+      <ion-icon
+        name="menu"
+        className="menu-icon"
+        onClick={() => setShowMobileNav(true)}
+      ></ion-icon>
       <aside className="categories-cont">
         <CategoryButtons id={id} setId={setId} />
       </aside>
@@ -27,10 +34,16 @@ function Home() {
         <Videos data={data} />
       </main>
 
-      <div className="categories-cont-mobile-nav">
-        <ion-icon name="close" className="close-mobile-nav"></ion-icon>
-        <CategoryButtons id={id} setId={setId} />
-      </div>
+      {showMobileNav && (
+        <div className="categories-cont-mobile-nav">
+          <ion-icon
+            name="close"
+            className="close-mobile-nav"
+            onClick={() => setShowMobileNav(false)}
+          ></ion-icon>
+          <CategoryButtons id={id} setId={setId} />
+        </div>
+      )}
     </section>
   );
 }
