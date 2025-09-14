@@ -21,10 +21,13 @@ function Video() {
         {error && <h1>Error...Something went wrong</h1>}
         {data?.data1 && (
           <div className="video-display">
-            <YouTube
-              videoId={params.videoId}
-              opts={{ height: "600px", width: "1000px" }}
-            />
+            <div className="video-wrapper">
+              <YouTube
+                videoId={params.videoId}
+                className="video-yt"
+                // opts={{ height: "600px", width: "1000px" }}
+              />
+            </div>
 
             <h1> {data?.data1.items[0].snippet.title} </h1>
 

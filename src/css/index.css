@@ -303,15 +303,36 @@ aside {
 /* Video */
 
 .clicked-video-container {
-  max-width: 1300px;
+  max-width: 130rem;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 4fr 1fr;
 }
 
 .video-display {
-  width: 1000px;
+  width: 100rem;
   text-align: left;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 100rem; /* optional, controls max size */
+  margin: 0 auto;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 10px; /* optional */
+  margin-bottom: 10px;
+}
+
+.video-yt iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  border: none;
 }
 
 .video-display-info {

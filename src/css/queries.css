@@ -81,7 +81,7 @@
   }
 }
 
-@media (max-width: 32em) {
+@media (max-width: 36em) {
   .video-container {
     grid-template-columns: 1fr;
   }
