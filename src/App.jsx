@@ -18,13 +18,10 @@ function App(props) {
     <nav>
       <Link className="home-link" to="/">
         <div className="yt-logo">
-          <ion-icon name="menu" className="menu-icon"></ion-icon>
-          <>
-            <img className="logo" src="./youtubeLogo.png" />
-            <h1 className="youtube" href="#">
-              YouTube
-            </h1>
-          </>
+          <img className="logo" src="./youtubeLogo.png" />
+          <h1 className="youtube" href="#">
+            YouTube
+          </h1>
         </div>
       </Link>
 

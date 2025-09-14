@@ -10,6 +10,7 @@ function Home() {
 
   return (
     <section>
+      <ion-icon name="menu" className="menu-icon"></ion-icon>
       <aside className="categories-cont">
         <CategoryButtons id={id} setId={setId} />
       </aside>
@@ -25,6 +26,11 @@ function Home() {
 
         <Videos data={data} />
       </main>
+
+      <div className="categories-cont-mobile-nav">
+        <ion-icon name="close" className="close-mobile-nav"></ion-icon>
+        <CategoryButtons id={id} setId={setId} />
+      </div>
     </section>
   );
 }
