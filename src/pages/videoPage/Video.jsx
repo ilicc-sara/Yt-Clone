@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import YouTube from "react-youtube";
 import Videos from "@/UI/Videos";
@@ -16,6 +16,25 @@ function Video() {
   const { suggestedQuery } = useGetSuggested(channelId);
 
   const [showMobileRecomended, setShowMobileRecomended] = useState(false);
+
+  const [width, setWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (width >= 1008) {
+      setShowMobileRecomended(false);
+    }
+  }, [width]);
+
+  function handleResize() {
+    setWidth(window.innerWidth);
+  }
 
   return (
     <>
