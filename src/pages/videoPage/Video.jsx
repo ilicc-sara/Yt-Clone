@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import YouTube from "react-youtube";
 import Videos from "@/UI/Videos";
@@ -14,10 +15,15 @@ function Video() {
   const channelId = data?.data2.items[0].snippet.channelId;
   const { suggestedQuery } = useGetSuggested(channelId);
 
+  const [showMobileRecomended, setShowMobileRecomended] = useState(false);
+
   return (
     <>
       <div className="recomended-mobile">
-        <i class="bxr  bx-list-ul list-icon"></i>
+        <i
+          class="bxr  bx-list-ul list-icon"
+          onClick={() => setShowMobileRecomended(true)}
+        ></i>
       </div>
       <div className="clicked-video-container">
         <div className="video-and-comments">
@@ -71,6 +77,17 @@ function Video() {
         <div className="suggested-display">
           <Videos data={suggestedQuery.data} />
         </div>
+
+        {showMobileRecomended && (
+          <div className="recomended-videos-mobile">
+            <ion-icon
+              name="close"
+              className="close-mobile-nav"
+              onClick={() => setShowMobileRecomended(false)}
+            ></ion-icon>
+            <Videos data={suggestedQuery.data} />
+          </div>
+        )}
       </div>
     </>
   );
