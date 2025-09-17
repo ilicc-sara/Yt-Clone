@@ -301,6 +301,17 @@ aside {
 }
 
 /* Video */
+.recomended-mobile {
+  text-align: end;
+  max-width: 130rem;
+  margin: 0 auto;
+  display: none;
+}
+
+.list-icon {
+  font-size: 42px;
+  cursor: pointer;
+}
 
 .clicked-video-container {
   max-width: 130rem;
