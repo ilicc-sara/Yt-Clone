@@ -26,6 +26,14 @@
   .video-and-comments {
     width: 90em;
   }
+
+  .clicked-channel-container {
+    width: 120em;
+  }
+
+  .channel-videos-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 @media (max-width: 74em) {
