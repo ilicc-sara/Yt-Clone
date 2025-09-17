@@ -141,6 +141,11 @@ aside {
   box-shadow: 0 0 10px rgb(255, 255, 255, 0.1);
   /* position: relative; */
   border-bottom-right-radius: 10px;
+  transform: translateX(-100%);
+  transition: all 0.5s ease-in;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 }
 
 .close-mobile-nav {
@@ -339,6 +344,18 @@ aside {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  transform: translateX(100%);
+  transition: all 0.5s ease-in;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.open {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+  transform: translate(0);
 }
 
 .close-recomended-videos {

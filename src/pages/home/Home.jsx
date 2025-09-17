@@ -53,16 +53,16 @@ function Home() {
         <Videos data={data} />
       </main>
 
-      {showMobileNav && (
-        <div className="categories-cont-mobile-nav">
-          <ion-icon
-            name="close"
-            className="close-mobile-nav"
-            onClick={() => setShowMobileNav(false)}
-          ></ion-icon>
-          <CategoryButtons id={id} setId={setId} />
-        </div>
-      )}
+      <div
+        className={`categories-cont-mobile-nav ${showMobileNav ? "open" : ""}`}
+      >
+        <ion-icon
+          name="close"
+          className="close-mobile-nav"
+          onClick={() => setShowMobileNav(false)}
+        ></ion-icon>
+        <CategoryButtons id={id} setId={setId} />
+      </div>
     </section>
   );
 }

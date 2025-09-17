@@ -78,16 +78,18 @@ function Video() {
           <Videos data={suggestedQuery.data} />
         </div>
 
-        {showMobileRecomended && (
-          <div className="recomended-videos-mobile">
-            <ion-icon
-              name="close"
-              className="close-mobile-nav"
-              onClick={() => setShowMobileRecomended(false)}
-            ></ion-icon>
-            <Videos data={suggestedQuery.data} />
-          </div>
-        )}
+        <div
+          className={`recomended-videos-mobile ${
+            showMobileRecomended ? "open" : ""
+          }`}
+        >
+          <ion-icon
+            name="close"
+            className="close-mobile-nav"
+            onClick={() => setShowMobileRecomended(false)}
+          ></ion-icon>
+          <Videos data={suggestedQuery.data} />
+        </div>
       </div>
     </>
   );
