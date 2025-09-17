@@ -56,6 +56,10 @@
   .video-and-comments {
     width: 78em;
   }
+
+  .clicked-channel-container {
+    width: 105em;
+  }
 }
 
 @media (max-width: 63em) {
@@ -85,6 +89,10 @@
 
   html {
     font-size: 50%;
+  }
+
+  .clicked-channel-container {
+    width: 100em;
   }
 }
 

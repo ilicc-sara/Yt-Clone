@@ -489,8 +489,8 @@ aside {
 }
 
 .channel-description {
-  font-size: 18px;
-  width: 1200px;
+  font-size: 1.8rem;
+  width: 80%;
   margin: 0 auto;
   text-align: center;
 }
