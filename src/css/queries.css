@@ -109,6 +109,14 @@
     display: block;
     left: -15px;
   }
+
+  .clicked-channel-container {
+    width: 90%;
+  }
+
+  .channel-videos-container {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media (max-width: 46em) {
@@ -130,6 +138,10 @@
 
   .search-input {
     width: 70%;
+  }
+
+  .channel-videos-container {
+    grid-template-columns: 1fr;
   }
 }
 
